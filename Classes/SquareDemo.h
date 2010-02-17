@@ -1,5 +1,5 @@
 //
-//  DemoScene.h
+//  SquareDemo.h
 //  Aposelene
 //
 //  Created by Jason L Perry on 2/17/10.
@@ -9,7 +9,7 @@
 #import "ASScene.h"
 
 
-@interface DemoScene : NSObject <ASScene>
+@interface SquareDemo : NSObject <ASScene>
 {
 
 }

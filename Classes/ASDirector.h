@@ -16,7 +16,7 @@
 
 + (ASDirector*)instance;
 
-- (void)load:(NSString*)sceneClassName;
++ (void)load:(NSString*)sceneClassName;
 
 @property (nonatomic, retain) id <ASScene> scene;
 

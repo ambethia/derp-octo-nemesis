@@ -23,20 +23,19 @@
     if (!instance)
     {
       instance = [[ASDirector alloc] init];
-      [instance load:@"DemoScene"];
     }
   }
   return instance;
 }
 
 
-- (void)load:(NSString*)sceneClassName;
++ (void)load:(NSString*)sceneClassName;
 {
   Class klass = NSClassFromString(sceneClassName);
   if (klass)
   {
     id _scene = [[klass alloc] init];
-    [self setScene:_scene];
+    [[self instance] setScene:_scene];
     [_scene release];
   }
   else {

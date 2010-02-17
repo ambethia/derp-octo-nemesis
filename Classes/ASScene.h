@@ -8,6 +8,7 @@
 
 @class ASView;
 
+
 @protocol ASScene <NSObject>
 
 - (void)update:(float)delta;

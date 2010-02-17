@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ASView.h"
+#import "ASDirector.h"
 
 
 @implementation AppDelegate
@@ -22,6 +23,7 @@
 	[window addSubview:asView];
 	[window makeKeyAndVisible];
   
+  [ASDirector load:@"SquareDemo"];
   [asView performSelectorOnMainThread:@selector(mainLoop) withObject:nil waitUntilDone:NO]; 
 }
 

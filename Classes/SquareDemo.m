@@ -1,15 +1,15 @@
 //
-//  DemoScene.m
+//  SquareDemo.m
 //  Aposelene
 //
 //  Created by Jason L Perry on 2/17/10.
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#import "DemoScene.h"
+#import "SquareDemo.h"
 #import "ASView.h"
 
-@implementation DemoScene
+@implementation SquareDemo
 
 
 - (void)update:(float)delta;
