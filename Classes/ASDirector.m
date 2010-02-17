@@ -34,7 +34,7 @@
   static ASView* _view;
   if (!_view)
   {
-    _view = [[ASView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _view = [[ASView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
     [[self instance] setView:_view];
     [_view release];
   }
