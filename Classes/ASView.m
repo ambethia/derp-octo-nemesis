@@ -127,19 +127,25 @@
 
 - (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event;
 {
-	[[director scene] touchesBegan:touches withEvent:event inView:self];
+  if ([[director scene] respondsToSelector:@selector(touchesBegan:withEvent:inView:)]) {
+    [[director scene] touchesBegan:touches withEvent:event inView:self];
+  }
 }
 
 
 - (void)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event;
 {
-	[[director scene] touchesMoved:touches withEvent:event inView:self];
+  if ([[director scene] respondsToSelector:@selector(touchesMoved:withEvent:inView:)]) {
+    [[director scene] touchesMoved:touches withEvent:event inView:self];
+  }
 }
 
 
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event;
 {
-	[[director scene] touchesEnded:touches withEvent:event inView:self];
+  if ([[director scene] respondsToSelector:@selector(touchesEnded:withEvent:inView:)]) {
+    [[director scene] touchesEnded:touches withEvent:event inView:self];
+  }  
 }
 
 

@@ -63,17 +63,6 @@
   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 }
 
-
-- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
-{
-}
-
-
-- (void)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
-{
-}
-
-
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
 {
   [ASDirector load:@"MainMenu"];

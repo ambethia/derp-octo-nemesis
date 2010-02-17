@@ -39,18 +39,6 @@
 }
 
 
-- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
-{
-  
-}
-
-
-- (void)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
-{
-  
-}
-
-
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
 {
   [ASDirector load:@"MainMenu"];

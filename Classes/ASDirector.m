@@ -16,16 +16,15 @@
 
 + (ASDirector*)instance;
 {
-  static ASDirector* instance;
-  
+  static ASDirector* _instance;
   @synchronized(self)
   {
-    if (!instance)
+    if (!_instance)
     {
-      instance = [[ASDirector alloc] init];
+      _instance = [[ASDirector alloc] init];
     }
   }
-  return instance;
+  return _instance;
 }
 
 
@@ -58,6 +57,7 @@
   }
   [[self view] setNeedsLayout];
 }
+
 
 - (void)setupOpenGL;
 {
