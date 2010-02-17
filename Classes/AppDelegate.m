@@ -23,7 +23,8 @@
 	[window addSubview:asView];
 	[window makeKeyAndVisible];
   
-  [ASDirector load:@"SquareDemo"];
+  [[ASDirector instance] setView:asView];
+  [ASDirector load:@"MainMenu"];
   [asView performSelectorOnMainThread:@selector(mainLoop) withObject:nil waitUntilDone:NO]; 
 }
 

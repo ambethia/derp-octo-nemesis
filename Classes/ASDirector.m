@@ -12,11 +12,11 @@
 @implementation ASDirector
 
 @synthesize scene;
-
+@synthesize view;
 
 + (ASDirector*)instance;
 {
-  static ASDirector *instance;
+  static ASDirector* instance;
   
   @synchronized(self)
   {
@@ -36,6 +36,7 @@
   {
     id _scene = [[klass alloc] init];
     [[self instance] setScene:_scene];
+    [[[self instance] view] setNeedsLayout];
     [_scene release];
   }
   else {
@@ -44,10 +45,10 @@
 
 }
 
-
 - (void)dealloc;
 {
   [scene release];
+  [view release];
   [super dealloc];
 }
 

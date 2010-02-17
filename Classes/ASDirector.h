@@ -6,12 +6,13 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#import "ASScene.h"
+#import "Aposelene.h"
 
 
 @interface ASDirector : NSObject
 {
   id <ASScene> scene;
+  ASView* view;
 }
 
 + (ASDirector*)instance;
@@ -19,5 +20,6 @@
 + (void)load:(NSString*)sceneClassName;
 
 @property (nonatomic, retain) id <ASScene> scene;
+@property (nonatomic, retain) ASView* view;
 
 @end
