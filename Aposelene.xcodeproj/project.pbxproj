@@ -12,6 +12,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		A41B1967112C807700E75195 /* SpriteDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B1966112C807700E75195 /* SpriteDemo.m */; };
 		A42FA45E112BC90300807DB1 /* ASView.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA45D112BC90300807DB1 /* ASView.m */; };
 		A42FA489112BCC0A00807DB1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42FA488112BCC0A00807DB1 /* QuartzCore.framework */; };
 		A42FA4B3112BCF0900807DB1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42FA4B2112BCF0900807DB1 /* OpenGLES.framework */; };
@@ -30,6 +31,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A41B1966112C807700E75195 /* SpriteDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteDemo.m; sourceTree = "<group>"; };
 		A42FA45C112BC90300807DB1 /* ASView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASView.h; path = Classes/ASView.h; sourceTree = "<group>"; };
 		A42FA45D112BC90300807DB1 /* ASView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASView.m; path = Classes/ASView.m; sourceTree = "<group>"; };
 		A42FA488112BCC0A00807DB1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -37,9 +39,7 @@
 		A42FA547112BE41700807DB1 /* ASDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASDirector.h; path = Classes/ASDirector.h; sourceTree = "<group>"; };
 		A42FA548112BE41700807DB1 /* ASDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASDirector.m; path = Classes/ASDirector.m; sourceTree = "<group>"; };
 		A42FA557112BE61300807DB1 /* ASScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASScene.h; path = Classes/ASScene.h; sourceTree = "<group>"; };
-		A42FA5BD112BEAD300807DB1 /* SquareDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareDemo.h; sourceTree = "<group>"; };
 		A42FA5BE112BEAD300807DB1 /* SquareDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareDemo.m; sourceTree = "<group>"; };
-		A42FA788112C564600807DB1 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 		A42FA789112C564600807DB1 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		A42FA78D112C56FE00807DB1 /* Aposelene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aposelene.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,10 +123,9 @@
 		A42FA5BC112BEAB700807DB1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				A42FA5BD112BEAD300807DB1 /* SquareDemo.h */,
 				A42FA5BE112BEAD300807DB1 /* SquareDemo.m */,
-				A42FA788112C564600807DB1 /* MainMenu.h */,
 				A42FA789112C564600807DB1 /* MainMenu.m */,
+				A41B1966112C807700E75195 /* SpriteDemo.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -202,6 +201,7 @@
 				A42FA549112BE41700807DB1 /* ASDirector.m in Sources */,
 				A42FA5BF112BEAD300807DB1 /* SquareDemo.m in Sources */,
 				A42FA78A112C564600807DB1 /* MainMenu.m in Sources */,
+				A41B1967112C807700E75195 /* SpriteDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

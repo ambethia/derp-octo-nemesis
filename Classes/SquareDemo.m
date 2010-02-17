@@ -6,8 +6,14 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#import "SquareDemo.h"
-#import "ASView.h"
+#import "Aposelene.h"
+
+
+@interface SquareDemo : NSObject <ASScene>
+{
+}
+
+@end
 
 
 @implementation SquareDemo
@@ -21,10 +27,10 @@
 - (void)draw:(ASView*)view;
 {
   static const GLfloat squareVertices[] = {
-    -0.5f,  -0.33f,
-    0.5f,  -0.33f,
-    -0.5f,   0.33f,
-    0.5f,   0.33f,
+    120.0f, 200.0f, // BL
+    120.0f, 280.0f, // TL
+    200.0f, 200.0f, // BR
+    200.0f, 280.0f  // TR
   };
 	
   static const GLubyte squareColors[] = {
@@ -34,14 +40,9 @@
     255,   0, 255, 255,
   };
   
-	static float transY = 0.0f;
-  
-  glMatrixMode(GL_PROJECTION);
-  glLoadIdentity();
-  glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-  glTranslatef(0.0f, (GLfloat)(sinf(transY)/2.0f), 0.0f);
-	transY += 0.02f;
+	static float trans = 0.0f;
+  glTranslatef((GLfloat)(cosf(trans)*0.5), (GLfloat)(sinf(trans)*0.5f), 0.0f);
+	trans += 0.02f;
 	
   glClear(GL_COLOR_BUFFER_BIT);
   
@@ -51,23 +52,15 @@
   glEnableClientState(GL_COLOR_ARRAY);
   
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+
+  glDisableClientState(GL_VERTEX_ARRAY);
+  glDisableClientState(GL_COLOR_ARRAY);
 }
 
 
 - (void)setup:(ASView*)view;
 {      
-  //    if([Director isInLandscapeMode])
-  //    {
-  //      glRotatef(-90.0f, 0, 0, 1);
-  //      glOrthof(0, screenBounds.size.height, 0, screenBounds.size.width, -1, 1);
-  //    }
-  //    else
-  //    {
-  glOrthof(0, view.bounds.size.width, 0, view.bounds.size.height, -1, 1);
-  //    }
-  glViewport(0, 0, view.bounds.size.width, view.bounds.size.height);
-  glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_BLEND_SRC);
-  glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
+  glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 }
 
 
@@ -83,6 +76,7 @@
 
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
 {
+  [ASDirector load:@"MainMenu"];
 }
 
 

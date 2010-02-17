@@ -12,6 +12,7 @@
 @implementation ASDirector
 
 @synthesize scene;
+@synthesize view;
 
 + (ASDirector*)instance;
 {
@@ -31,12 +32,14 @@
 
 + (ASView*)view;
 {
-  static ASView* view;
-  if (!view)
+  static ASView* _view;
+  if (!_view)
   {
-    view = [[ASView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _view = [[ASView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [[self instance] setView:_view];
+    [_view release];
   }
-  return view;
+  return _view;
 }
 
 
@@ -47,6 +50,7 @@
   {
     id _scene = [[klass alloc] init];
     [[self instance] setScene:_scene];
+    [[self instance] setupOpenGL];
     [_scene release];
   }
   else {
@@ -55,6 +59,19 @@
   [[self view] setNeedsLayout];
 }
 
+- (void)setupOpenGL;
+{
+  glLoadIdentity();
+  glViewport(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+  glMatrixMode(GL_PROJECTION);
+
+  glLoadIdentity();
+  glOrthof(0, self.view.bounds.size.width, 0, self.view.bounds.size.height, -1, 1);
+  glMatrixMode(GL_MODELVIEW);
+
+  glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+  glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_BLEND_SRC);
+}
 
 
 - (void)dealloc;

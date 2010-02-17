@@ -12,11 +12,16 @@
 @interface ASDirector : NSObject
 {
   id <ASScene> scene;
+  ASView* view;
 }
 
 + (ASDirector*)instance;
 + (ASView*)view;
 + (void)load:(NSString*)sceneClassName;
 
+- (void)setupOpenGL;
+
 @property (nonatomic, retain) id <ASScene> scene;
+@property (nonatomic, retain) ASView* view;
+
 @end
