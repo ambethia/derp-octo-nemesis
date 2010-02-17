@@ -10,8 +10,6 @@
 #import <OpenGLES/ES1/gl.h>
 #import <OpenGLES/ES1/glext.h>
 
-#import "ASViewDelegate.h"
-
 @class ASDirector;
 
 @interface ASView : UIView

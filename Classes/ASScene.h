@@ -1,5 +1,5 @@
 //
-//  ASViewDelegate.h
+//  ASScene.h
 //  Aposelene
 //
 //  Created by Jason L Perry on 2/17/10.
@@ -8,7 +8,7 @@
 
 @class ASView;
 
-@protocol ASViewDelegate <NSObject>
+@protocol ASScene <NSObject>
 
 - (void)update:(float)delta;
 

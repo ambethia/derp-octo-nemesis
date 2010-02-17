@@ -6,10 +6,10 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#import "ASViewDelegate.h"
+#import "ASScene.h"
 
 
-@interface DemoScene : NSObject <ASViewDelegate>
+@interface DemoScene : NSObject <ASScene>
 {
 
 }

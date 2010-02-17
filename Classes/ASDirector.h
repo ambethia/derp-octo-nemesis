@@ -6,18 +6,18 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#import "ASViewDelegate.h"
+#import "ASScene.h"
 
 
 @interface ASDirector : NSObject
 {
-  id <ASViewDelegate> scene;
+  id <ASScene> scene;
 }
 
 + (ASDirector*)instance;
 
 - (void)load:(NSString*)sceneClassName;
 
-@property (nonatomic, retain) id <ASViewDelegate> scene;
+@property (nonatomic, retain) id <ASScene> scene;
 
 @end

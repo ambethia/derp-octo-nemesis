@@ -29,13 +29,13 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		A42FA45C112BC90300807DB1 /* ASView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASView.h; sourceTree = "<group>"; };
-		A42FA45D112BC90300807DB1 /* ASView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASView.m; sourceTree = "<group>"; };
+		A42FA45C112BC90300807DB1 /* ASView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASView.h; path = Classes/ASView.h; sourceTree = "<group>"; };
+		A42FA45D112BC90300807DB1 /* ASView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASView.m; path = Classes/ASView.m; sourceTree = "<group>"; };
 		A42FA488112BCC0A00807DB1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A42FA4B2112BCF0900807DB1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		A42FA547112BE41700807DB1 /* ASDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASDirector.h; sourceTree = "<group>"; };
-		A42FA548112BE41700807DB1 /* ASDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASDirector.m; sourceTree = "<group>"; };
-		A42FA557112BE61300807DB1 /* ASViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASViewDelegate.h; sourceTree = "<group>"; };
+		A42FA547112BE41700807DB1 /* ASDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASDirector.h; path = Classes/ASDirector.h; sourceTree = "<group>"; };
+		A42FA548112BE41700807DB1 /* ASDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASDirector.m; path = Classes/ASDirector.m; sourceTree = "<group>"; };
+		A42FA557112BE61300807DB1 /* ASScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASScene.h; path = Classes/ASScene.h; sourceTree = "<group>"; };
 		A42FA5BD112BEAD300807DB1 /* DemoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoScene.h; sourceTree = "<group>"; };
 		A42FA5BE112BEAD300807DB1 /* DemoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,11 +62,6 @@
 				A42FA5BC112BEAB700807DB1 /* Scenes */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
-				A42FA45C112BC90300807DB1 /* ASView.h */,
-				A42FA45D112BC90300807DB1 /* ASView.m */,
-				A42FA557112BE61300807DB1 /* ASViewDelegate.h */,
-				A42FA547112BE41700807DB1 /* ASDirector.h */,
-				A42FA548112BE41700807DB1 /* ASDirector.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -82,6 +77,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				A42FA72F112C4AA400807DB1 /* Aposelene */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -127,6 +123,18 @@
 				A42FA5BE112BEAD300807DB1 /* DemoScene.m */,
 			);
 			name = Scenes;
+			sourceTree = "<group>";
+		};
+		A42FA72F112C4AA400807DB1 /* Aposelene */ = {
+			isa = PBXGroup;
+			children = (
+				A42FA547112BE41700807DB1 /* ASDirector.h */,
+				A42FA548112BE41700807DB1 /* ASDirector.m */,
+				A42FA45C112BC90300807DB1 /* ASView.h */,
+				A42FA45D112BC90300807DB1 /* ASView.m */,
+				A42FA557112BE61300807DB1 /* ASScene.h */,
+			);
+			name = Aposelene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
