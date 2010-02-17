@@ -12,7 +12,6 @@
 @implementation ASDirector
 
 @synthesize scene;
-@synthesize view;
 
 + (ASDirector*)instance;
 {
@@ -29,6 +28,18 @@
 }
 
 
+
++ (ASView*)view;
+{
+  static ASView* view;
+  if (!view)
+  {
+    view = [[ASView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  }
+  return view;
+}
+
+
 + (void)load:(NSString*)sceneClassName;
 {
   Class klass = NSClassFromString(sceneClassName);
@@ -36,19 +47,19 @@
   {
     id _scene = [[klass alloc] init];
     [[self instance] setScene:_scene];
-    [[[self instance] view] setNeedsLayout];
     [_scene release];
   }
   else {
     NSLog(@"Couldn't load scene: \"%@\"", sceneClassName);
   }
-
+  [[self view] setNeedsLayout];
 }
+
+
 
 - (void)dealloc;
 {
   [scene release];
-  [view release];
   [super dealloc];
 }
 

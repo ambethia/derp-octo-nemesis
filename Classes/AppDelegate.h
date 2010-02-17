@@ -12,7 +12,6 @@
 @interface AppDelegate : NSObject <UIApplicationDelegate>
 {
   UIWindow* window;
-  ASView* asView;
 }
 
 @end

@@ -17,22 +17,20 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application;
 {
   window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-	asView = [[ASView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-	[window setUserInteractionEnabled:YES];	
-	[window addSubview:asView];
-	[window makeKeyAndVisible];
-  
-  [[ASDirector instance] setView:asView];
   [ASDirector load:@"MainMenu"];
-  [asView performSelectorOnMainThread:@selector(mainLoop) withObject:nil waitUntilDone:NO]; 
+  [window addSubview:[ASDirector view]];
+
+	[window setUserInteractionEnabled:YES];
+  [window makeKeyAndVisible];
+
+  [[ASDirector view] performSelectorOnMainThread:@selector(mainLoop) withObject:nil waitUntilDone:NO];
 }
 
 
 - (void)dealloc;
 {
   [window release];
-  [asView release];
   [super dealloc];
 }
 

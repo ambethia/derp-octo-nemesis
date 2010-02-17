@@ -20,13 +20,13 @@
 
 - (void)draw:(ASView*)view;
 {
-  
+  glClear(GL_COLOR_BUFFER_BIT);
 }
 
 
 - (void)setup:(ASView*)view;
 {
-  
+  glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 }
 
 

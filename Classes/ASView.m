@@ -6,10 +6,7 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
-
 #import "ASView.h"
-#import "ASDirector.h"
 
 
 @implementation ASView

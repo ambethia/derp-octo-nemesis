@@ -6,9 +6,7 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#import <OpenGLES/EAGL.h>
-#import <OpenGLES/ES1/gl.h>
-#import <OpenGLES/ES1/glext.h>
+#import "Aposelene.h"
 
 
 @class ASDirector;
