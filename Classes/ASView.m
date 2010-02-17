@@ -124,4 +124,25 @@
   viewRenderbuffer = 0;  
 }
 
+
+#pragma mark Touches
+
+- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event;
+{
+	[[director scene] touchesBegan:touches withEvent:event inView:self];
+}
+
+
+- (void)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event;
+{
+	[[director scene] touchesMoved:touches withEvent:event inView:self];
+}
+
+
+- (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event;
+{
+	[[director scene] touchesEnded:touches withEvent:event inView:self];
+}
+
+
 @end

@@ -6,10 +6,6 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#import <OpenGLES/EAGL.h>
-#import <OpenGLES/ES1/gl.h>
-#import <OpenGLES/ES1/glext.h>
-
 #import "DemoScene.h"
 #import "ASView.h"
 
@@ -59,7 +55,7 @@
 
 - (void)setup:(ASView*)view;
 {      
-  //    if(LANDSCAPE_MODE)
+  //    if([Director isInLandscapeMode])
   //    {
   //      glRotatef(-90.0f, 0, 0, 1);
   //      glOrthof(0, screenBounds.size.height, 0, screenBounds.size.width, -1, 1);
@@ -71,6 +67,21 @@
   glViewport(0, 0, view.bounds.size.width, view.bounds.size.height);
   glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_BLEND_SRC);
   glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
+}
+
+
+- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
+{
+}
+
+
+- (void)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
+{
+}
+
+
+- (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
+{
 }
 
 

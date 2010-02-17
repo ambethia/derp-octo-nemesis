@@ -11,7 +11,16 @@
 @protocol ASViewDelegate <NSObject>
 
 - (void)update:(float)delta;
+
 - (void)draw:(ASView*)view;
+
 - (void)setup:(ASView*)view;
+
+- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
+
+- (void)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
+
+- (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
+
 
 @end
