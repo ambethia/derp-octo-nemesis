@@ -12,7 +12,8 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		A41B1967112C807700E75195 /* SpriteDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B1966112C807700E75195 /* SpriteDemo.m */; };
+		A41B1967112C807700E75195 /* TextureDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B1966112C807700E75195 /* TextureDraw.m */; };
+		A41B1C5E112CDF2E00E75195 /* tim-sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = A41B1C5D112CDF2E00E75195 /* tim-sprite.png */; };
 		A42FA45E112BC90300807DB1 /* ASView.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA45D112BC90300807DB1 /* ASView.m */; };
 		A42FA489112BCC0A00807DB1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42FA488112BCC0A00807DB1 /* QuartzCore.framework */; };
 		A42FA4B3112BCF0900807DB1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42FA4B2112BCF0900807DB1 /* OpenGLES.framework */; };
@@ -31,7 +32,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		A41B1966112C807700E75195 /* SpriteDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteDemo.m; sourceTree = "<group>"; };
+		A41B1966112C807700E75195 /* TextureDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureDraw.m; sourceTree = "<group>"; };
+		A41B1C5D112CDF2E00E75195 /* tim-sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tim-sprite.png"; path = "Resources/tim-sprite.png"; sourceTree = "<group>"; };
 		A42FA45C112BC90300807DB1 /* ASView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASView.h; path = Classes/ASView.h; sourceTree = "<group>"; };
 		A42FA45D112BC90300807DB1 /* ASView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASView.m; path = Classes/ASView.m; sourceTree = "<group>"; };
 		A42FA488112BCC0A00807DB1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -103,6 +105,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A41B1C5D112CDF2E00E75195 /* tim-sprite.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 			);
 			name = Resources;
@@ -125,7 +128,7 @@
 			children = (
 				A42FA5BE112BEAD300807DB1 /* SquareDemo.m */,
 				A42FA789112C564600807DB1 /* MainMenu.m */,
-				A41B1966112C807700E75195 /* SpriteDemo.m */,
+				A41B1966112C807700E75195 /* TextureDraw.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A41B1C5E112CDF2E00E75195 /* tim-sprite.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +205,7 @@
 				A42FA549112BE41700807DB1 /* ASDirector.m in Sources */,
 				A42FA5BF112BEAD300807DB1 /* SquareDemo.m in Sources */,
 				A42FA78A112C564600807DB1 /* MainMenu.m in Sources */,
-				A41B1967112C807700E75195 /* SpriteDemo.m in Sources */,
+				A41B1967112C807700E75195 /* TextureDraw.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

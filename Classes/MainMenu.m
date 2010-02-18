@@ -71,7 +71,7 @@
   
   if (CGRectContainsPoint(CGRectMake(20, 40, 300, 40), touchLocation))
   {
-    [ASDirector load:@"SpriteDemo"];
+    [ASDirector load:@"TextureDraw"];
   }
 
   if (CGRectContainsPoint(CGRectMake(20, 100, 300, 40), touchLocation))
