@@ -12,13 +12,14 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		A41B1967112C807700E75195 /* TextureDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B1966112C807700E75195 /* TextureDraw.m */; };
 		A41B1C5E112CDF2E00E75195 /* tim-sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = A41B1C5D112CDF2E00E75195 /* tim-sprite.png */; };
+		A41B1DAB112D078D00E75195 /* ASTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B1DAA112D078D00E75195 /* ASTexture.m */; };
+		A41B1DEF112D0A1100E75195 /* SquareDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B1DEE112D0A1100E75195 /* SquareDemo.m */; };
 		A42FA45E112BC90300807DB1 /* ASView.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA45D112BC90300807DB1 /* ASView.m */; };
 		A42FA489112BCC0A00807DB1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42FA488112BCC0A00807DB1 /* QuartzCore.framework */; };
 		A42FA4B3112BCF0900807DB1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42FA4B2112BCF0900807DB1 /* OpenGLES.framework */; };
 		A42FA549112BE41700807DB1 /* ASDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA548112BE41700807DB1 /* ASDirector.m */; };
-		A42FA5BF112BEAD300807DB1 /* SquareDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA5BE112BEAD300807DB1 /* SquareDemo.m */; };
+		A42FA5BF112BEAD300807DB1 /* TextureDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA5BE112BEAD300807DB1 /* TextureDemo.m */; };
 		A42FA78A112C564600807DB1 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA789112C564600807DB1 /* MainMenu.m */; };
 /* End PBXBuildFile section */
 
@@ -32,8 +33,10 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		A41B1966112C807700E75195 /* TextureDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureDraw.m; sourceTree = "<group>"; };
 		A41B1C5D112CDF2E00E75195 /* tim-sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tim-sprite.png"; path = "Resources/tim-sprite.png"; sourceTree = "<group>"; };
+		A41B1DA9112D078D00E75195 /* ASTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASTexture.h; path = Classes/ASTexture.h; sourceTree = "<group>"; };
+		A41B1DAA112D078D00E75195 /* ASTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASTexture.m; path = Classes/ASTexture.m; sourceTree = "<group>"; };
+		A41B1DEE112D0A1100E75195 /* SquareDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareDemo.m; sourceTree = "<group>"; };
 		A42FA45C112BC90300807DB1 /* ASView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASView.h; path = Classes/ASView.h; sourceTree = "<group>"; };
 		A42FA45D112BC90300807DB1 /* ASView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASView.m; path = Classes/ASView.m; sourceTree = "<group>"; };
 		A42FA488112BCC0A00807DB1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -41,9 +44,9 @@
 		A42FA547112BE41700807DB1 /* ASDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASDirector.h; path = Classes/ASDirector.h; sourceTree = "<group>"; };
 		A42FA548112BE41700807DB1 /* ASDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASDirector.m; path = Classes/ASDirector.m; sourceTree = "<group>"; };
 		A42FA557112BE61300807DB1 /* ASScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASScene.h; path = Classes/ASScene.h; sourceTree = "<group>"; };
-		A42FA5BE112BEAD300807DB1 /* SquareDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareDemo.m; sourceTree = "<group>"; };
+		A42FA5BE112BEAD300807DB1 /* TextureDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureDemo.m; sourceTree = "<group>"; };
 		A42FA789112C564600807DB1 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
-		A42FA78D112C56FE00807DB1 /* Aposelene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aposelene.h; sourceTree = "<group>"; };
+		A42FA78D112C56FE00807DB1 /* Aposelene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Aposelene.h; path = Classes/Aposelene.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +129,9 @@
 		A42FA5BC112BEAB700807DB1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				A42FA5BE112BEAD300807DB1 /* SquareDemo.m */,
+				A41B1DEE112D0A1100E75195 /* SquareDemo.m */,
+				A42FA5BE112BEAD300807DB1 /* TextureDemo.m */,
 				A42FA789112C564600807DB1 /* MainMenu.m */,
-				A41B1966112C807700E75195 /* TextureDraw.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -142,6 +145,8 @@
 				A42FA45C112BC90300807DB1 /* ASView.h */,
 				A42FA45D112BC90300807DB1 /* ASView.m */,
 				A42FA557112BE61300807DB1 /* ASScene.h */,
+				A41B1DA9112D078D00E75195 /* ASTexture.h */,
+				A41B1DAA112D078D00E75195 /* ASTexture.m */,
 			);
 			name = Aposelene;
 			sourceTree = "<group>";
@@ -203,9 +208,10 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				A42FA45E112BC90300807DB1 /* ASView.m in Sources */,
 				A42FA549112BE41700807DB1 /* ASDirector.m in Sources */,
-				A42FA5BF112BEAD300807DB1 /* SquareDemo.m in Sources */,
+				A42FA5BF112BEAD300807DB1 /* TextureDemo.m in Sources */,
 				A42FA78A112C564600807DB1 /* MainMenu.m in Sources */,
-				A41B1967112C807700E75195 /* TextureDraw.m in Sources */,
+				A41B1DAB112D078D00E75195 /* ASTexture.m in Sources */,
+				A41B1DEF112D0A1100E75195 /* SquareDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

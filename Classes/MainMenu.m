@@ -41,20 +41,27 @@
     300.0f, 380.0f  // TR
   };
 
+  static const GLfloat vertices_btn3[] = {
+    20.0f, 280.0f, // BL
+    20.0f, 320.0f, // TL
+    300.0f, 280.0f, // BR
+    300.0f, 320.0f  // TR
+  };
+
   glClear(GL_COLOR_BUFFER_BIT);
   glEnableClientState(GL_VERTEX_ARRAY);
-  glColor4f(0.6f, 0.6f, 0.6f, 1.0f);  
   
   glLoadIdentity();
 
   glVertexPointer(2, GL_FLOAT, 0, vertices_btn1);
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-
-  glLoadIdentity();
   
   glVertexPointer(2, GL_FLOAT, 0, vertices_btn2);
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
+  glVertexPointer(2, GL_FLOAT, 0, vertices_btn3);
+  glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+  
   glDisableClientState(GL_VERTEX_ARRAY);
 }
 
@@ -71,12 +78,17 @@
   
   if (CGRectContainsPoint(CGRectMake(20, 40, 300, 40), touchLocation))
   {
-    [ASDirector load:@"TextureDraw"];
+    [ASDirector load:@""];
   }
 
   if (CGRectContainsPoint(CGRectMake(20, 100, 300, 40), touchLocation))
   {
     [ASDirector load:@"SquareDemo"];
+  }
+  
+  if (CGRectContainsPoint(CGRectMake(20, 160, 300, 40), touchLocation))
+  {
+    [ASDirector load:@"TextureDemo"];
   }
 }
 

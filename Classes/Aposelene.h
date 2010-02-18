@@ -14,3 +14,4 @@
 #import "ASScene.h"
 #import "ASDirector.h"
 #import "ASView.h"
+#import "ASTexture.h"
