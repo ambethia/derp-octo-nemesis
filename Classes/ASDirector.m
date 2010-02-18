@@ -49,7 +49,6 @@
   {
     id _scene = [[klass alloc] init];
     [[self instance] setScene:_scene];
-    [[self instance] setupOpenGL];
     [_scene release];
   }
   else {

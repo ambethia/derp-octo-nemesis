@@ -109,6 +109,7 @@
     NSLog(@"Failed to make complete framebuffer object %x", glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES));
     return NO;
   }
+  [director setupOpenGL];
   [[director scene] setup:self];
   return YES;  
 }

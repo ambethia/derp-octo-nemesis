@@ -61,7 +61,6 @@
 
 - (void)setup:(ASView*)view;
 { 
-  [[ASDirector instance] setupOpenGL];
   glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
 }
 
