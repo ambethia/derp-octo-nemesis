@@ -7,7 +7,7 @@
 //
 
 #import "ASDirector.h"
-
+#import "ASView.h"
 
 @implementation ASDirector
 

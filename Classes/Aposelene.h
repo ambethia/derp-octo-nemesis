@@ -6,13 +6,8 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
-#import <OpenGLES/EAGL.h>
-#import <OpenGLES/ES1/gl.h>
-#import <OpenGLES/ES1/glext.h>
-
 #import "ASCommon.h"
-#import "ASScene.h"
 #import "ASDirector.h"
-#import "ASView.h"
+#import "ASScene.h"
 #import "ASTexture.h"
+#import "ASView.h"

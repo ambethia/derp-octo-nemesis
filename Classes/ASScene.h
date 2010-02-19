@@ -6,8 +6,8 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-@class ASView;
 
+@class ASView;
 
 @protocol ASScene <NSObject>
 

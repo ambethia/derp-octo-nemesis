@@ -6,8 +6,10 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#import "Aposelene.h"
+#import "ASScene.h"
 
+
+@class ASView;
 
 @interface ASDirector : NSObject
 {

@@ -6,6 +6,8 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
+#import <OpenGLES/ES1/gl.h>
+
 #pragma mark Vertex2D
 
 typedef struct {

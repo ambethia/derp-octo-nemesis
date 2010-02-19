@@ -14,7 +14,7 @@
 //   (0, 0)     (1, 0)
 //
 
-#import "Aposelene.h"
+#import "ASCommon.h"
 
 
 @interface ASTexture : NSObject

@@ -6,7 +6,10 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
+#import <OpenGLES/ES1/gl.h>
+
 #import "ASTexture.h"
+#import "ASCommon.h"
 
 
 @implementation ASTexture

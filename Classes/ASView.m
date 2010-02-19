@@ -6,8 +6,11 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#import "ASView.h"
+#import <QuartzCore/QuartzCore.h>
+#import <OpenGLES/ES1/glext.h>
 
+#import "ASView.h"
+#import "ASDirector.h"
 
 @implementation ASView
 
