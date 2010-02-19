@@ -12,7 +12,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		A41B1C5E112CDF2E00E75195 /* tim-sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = A41B1C5D112CDF2E00E75195 /* tim-sprite.png */; };
+		A41B1C5E112CDF2E00E75195 /* tim-hovering.png in Resources */ = {isa = PBXBuildFile; fileRef = A41B1C5D112CDF2E00E75195 /* tim-hovering.png */; };
 		A41B1DAB112D078D00E75195 /* ASTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B1DAA112D078D00E75195 /* ASTexture.m */; };
 		A41B1DEF112D0A1100E75195 /* SquareDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B1DEE112D0A1100E75195 /* SquareDemo.m */; };
 		A42FA45E112BC90300807DB1 /* ASView.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA45D112BC90300807DB1 /* ASView.m */; };
@@ -21,6 +21,8 @@
 		A42FA549112BE41700807DB1 /* ASDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA548112BE41700807DB1 /* ASDirector.m */; };
 		A42FA5BF112BEAD300807DB1 /* TextureDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA5BE112BEAD300807DB1 /* TextureDemo.m */; };
 		A42FA78A112C564600807DB1 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA789112C564600807DB1 /* MainMenu.m */; };
+		A4ECCE32112E493B008301EF /* tim-hovering.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4ECCE31112E493B008301EF /* tim-hovering.plist */; };
+		A4ECCF3E112E7BE6008301EF /* Texture2Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECCF3D112E7BE6008301EF /* Texture2Demo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +34,8 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		A41B1C5D112CDF2E00E75195 /* tim-sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tim-sprite.png"; path = "Resources/tim-sprite.png"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A41B1C5D112CDF2E00E75195 /* tim-hovering.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tim-hovering.png"; sourceTree = "<group>"; };
 		A41B1DA9112D078D00E75195 /* ASTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASTexture.h; path = Classes/ASTexture.h; sourceTree = "<group>"; };
 		A41B1DAA112D078D00E75195 /* ASTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASTexture.m; path = Classes/ASTexture.m; sourceTree = "<group>"; };
 		A41B1DEE112D0A1100E75195 /* SquareDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareDemo.m; sourceTree = "<group>"; };
@@ -47,6 +49,9 @@
 		A42FA5BE112BEAD300807DB1 /* TextureDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureDemo.m; sourceTree = "<group>"; };
 		A42FA789112C564600807DB1 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		A42FA78D112C56FE00807DB1 /* Aposelene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Aposelene.h; path = Classes/Aposelene.h; sourceTree = "<group>"; };
+		A4ECCE31112E493B008301EF /* tim-hovering.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tim-hovering.plist"; sourceTree = "<group>"; };
+		A4ECCED7112E68EA008301EF /* ASCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASCommon.h; sourceTree = "<group>"; };
+		A4ECCF3D112E7BE6008301EF /* Texture2Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Texture2Demo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +113,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A41B1C5D112CDF2E00E75195 /* tim-sprite.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
+				A41B1C5D112CDF2E00E75195 /* tim-hovering.png */,
+				A4ECCE31112E493B008301EF /* tim-hovering.plist */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
@@ -131,6 +137,7 @@
 			children = (
 				A41B1DEE112D0A1100E75195 /* SquareDemo.m */,
 				A42FA5BE112BEAD300807DB1 /* TextureDemo.m */,
+				A4ECCF3D112E7BE6008301EF /* Texture2Demo.m */,
 				A42FA789112C564600807DB1 /* MainMenu.m */,
 			);
 			name = Scenes;
@@ -140,13 +147,14 @@
 			isa = PBXGroup;
 			children = (
 				A42FA78D112C56FE00807DB1 /* Aposelene.h */,
+				A4ECCED7112E68EA008301EF /* ASCommon.h */,
 				A42FA547112BE41700807DB1 /* ASDirector.h */,
 				A42FA548112BE41700807DB1 /* ASDirector.m */,
-				A42FA45C112BC90300807DB1 /* ASView.h */,
-				A42FA45D112BC90300807DB1 /* ASView.m */,
 				A42FA557112BE61300807DB1 /* ASScene.h */,
 				A41B1DA9112D078D00E75195 /* ASTexture.h */,
 				A41B1DAA112D078D00E75195 /* ASTexture.m */,
+				A42FA45C112BC90300807DB1 /* ASView.h */,
+				A42FA45D112BC90300807DB1 /* ASView.m */,
 			);
 			name = Aposelene;
 			sourceTree = "<group>";
@@ -193,7 +201,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A41B1C5E112CDF2E00E75195 /* tim-sprite.png in Resources */,
+				A41B1C5E112CDF2E00E75195 /* tim-hovering.png in Resources */,
+				A4ECCE32112E493B008301EF /* tim-hovering.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +221,7 @@
 				A42FA78A112C564600807DB1 /* MainMenu.m in Sources */,
 				A41B1DAB112D078D00E75195 /* ASTexture.m in Sources */,
 				A41B1DEF112D0A1100E75195 /* SquareDemo.m in Sources */,
+				A4ECCF3E112E7BE6008301EF /* Texture2Demo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
