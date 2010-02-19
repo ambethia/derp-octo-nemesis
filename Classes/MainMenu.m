@@ -87,7 +87,7 @@
   
   if (CGRectContainsPoint(CGRectMake(20, 160, 300, 40), touchLocation))
   {
-    [ASDirector load:@""];
+    [ASDirector load:@"SpriteDemo"];
   }
 }
 

@@ -6,6 +6,7 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
+#import "ASAtlas.h"
 #import "ASCommon.h"
 #import "ASDirector.h"
 #import "ASScene.h"

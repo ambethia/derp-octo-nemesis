@@ -1,0 +1,48 @@
+//
+//  ASAtlas.m
+//  Aposelene
+//
+//  Created by Jason Perry on 2/19/10.
+//  Copyright 2010 Ambethia. All rights reserved.
+//
+
+#import "ASAtlas.h"
+#import "ASTexture.h"
+
+
+@implementation ASAtlas
+
+
+- (id)initWithDictionary:(NSDictionary*)dictionary;
+{
+
+  if (self = [super init])
+  {
+    texture = [[ASTexture alloc] initWithImagePath:[dictionary objectForKey:@"Texture"]];
+    animations = [(NSDictionary*)[dictionary objectForKey:@"Animations"] copy];
+    NSArray* _frames = (NSArray*)[dictionary objectForKey:@"Frames"];
+    frames = calloc([_frames count], sizeof(ASSpriteFrame));
+    for (int i = 0; i < [_frames count]; i++)
+    {
+      CGRectMakeWithDictionaryRepresentation((CFDictionaryRef)[_frames objectAtIndex:i], &frames[i]);
+    }
+  }
+  return self;
+}
+
+- (void)drawFrame:(int)frame AtPoint:(CGPoint)point;
+{  
+  [texture drawAtPoint:point withRect:frames[frame]];
+}
+
+- (void)dealloc;
+{
+  if (frames)
+    free(frames);
+
+  [texture release];
+  [animations release];
+  [super dealloc];
+}
+
+@end

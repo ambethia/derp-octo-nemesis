@@ -22,6 +22,8 @@
 		A42FA5BF112BEAD300807DB1 /* TextureDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA5BE112BEAD300807DB1 /* TextureDemo.m */; };
 		A42FA78A112C564600807DB1 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA789112C564600807DB1 /* MainMenu.m */; };
 		A4ECCE32112E493B008301EF /* tim-hovering.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4ECCE31112E493B008301EF /* tim-hovering.plist */; };
+		A4ECCFEB112EE30B008301EF /* ASAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECCFEA112EE30B008301EF /* ASAtlas.m */; };
+		A4ECD09F112EEB03008301EF /* SpriteDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECD09E112EEB03008301EF /* SpriteDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,9 @@
 		A42FA78D112C56FE00807DB1 /* Aposelene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Aposelene.h; path = Classes/Aposelene.h; sourceTree = "<group>"; };
 		A4ECCE31112E493B008301EF /* tim-hovering.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tim-hovering.plist"; sourceTree = "<group>"; };
 		A4ECCED7112E68EA008301EF /* ASCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASCommon.h; sourceTree = "<group>"; };
+		A4ECCFE9112EE30B008301EF /* ASAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAtlas.h; sourceTree = "<group>"; };
+		A4ECCFEA112EE30B008301EF /* ASAtlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAtlas.m; sourceTree = "<group>"; };
+		A4ECD09E112EEB03008301EF /* SpriteDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +141,7 @@
 				A41B1DEE112D0A1100E75195 /* SquareDemo.m */,
 				A42FA5BE112BEAD300807DB1 /* TextureDemo.m */,
 				A42FA789112C564600807DB1 /* MainMenu.m */,
+				A4ECD09E112EEB03008301EF /* SpriteDemo.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -144,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				A42FA78D112C56FE00807DB1 /* Aposelene.h */,
+				A4ECCFE9112EE30B008301EF /* ASAtlas.h */,
+				A4ECCFEA112EE30B008301EF /* ASAtlas.m */,
 				A4ECCED7112E68EA008301EF /* ASCommon.h */,
 				A42FA547112BE41700807DB1 /* ASDirector.h */,
 				A42FA548112BE41700807DB1 /* ASDirector.m */,
@@ -218,6 +226,8 @@
 				A42FA78A112C564600807DB1 /* MainMenu.m in Sources */,
 				A41B1DAB112D078D00E75195 /* ASTexture.m in Sources */,
 				A41B1DEF112D0A1100E75195 /* SquareDemo.m in Sources */,
+				A4ECCFEB112EE30B008301EF /* ASAtlas.m in Sources */,
+				A4ECD09F112EEB03008301EF /* SpriteDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
