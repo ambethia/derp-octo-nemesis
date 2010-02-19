@@ -12,6 +12,15 @@
 #import "ASCommon.h"
 
 
+@interface ASTexture()
+
+- (void)draw;
+
+- (void)reset;
+
+@end
+
+
 @implementation ASTexture
 
 
@@ -22,35 +31,36 @@
   CGContextRef context;
   GLubyte*     data;
 
-	if(![path isAbsolutePath])
+  if (self = [super init])
   {
-    path = [[NSBundle mainBundle] pathForResource:path ofType:nil];
+    if(![path isAbsolutePath])
+      path = [[NSBundle mainBundle] pathForResource:path ofType:nil];
+    
+    image = [[UIImage alloc] initWithContentsOfFile:path];
+    reference = [image CGImage];
+    size = CGSizeMake(CGImageGetWidth(reference), CGImageGetHeight(reference));
+    
+    if (reference)
+    {
+      // Copy the image data to memory, then bind it to an OpenGL texture.
+      data = (GLubyte*) calloc(size.width * size.height * 4, sizeof(GLubyte));
+      context = CGBitmapContextCreate(data, size.width, size.height, 8, size.width * 4,
+                                      CGImageGetColorSpace(reference), kCGImageAlphaPremultipliedLast);
+      // Compensate for CoreGraphics' reveresed y/t axis
+      CGContextTranslateCTM (context, 0, size.height);
+      CGContextScaleCTM (context, 1.0, -1.0);
+      CGContextDrawImage(context, CGRectMake(0.0, 0.0, size.width, size.height), reference);
+      CGContextRelease(context);
+      glGenTextures(1, &name);
+      glBindTexture(GL_TEXTURE_2D, name);
+      glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+      glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+      glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, size.width, size.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+      free(data);
+    }
+    [image release];
+    [self reset];
   }
-
-	image = [[UIImage alloc] initWithContentsOfFile:path];
-  reference = [image CGImage];
-  size = CGSizeMake(CGImageGetWidth(reference), CGImageGetHeight(reference));
-
-  if (reference)
-  {
-    // Copy the image data to memory, then bind it to an OpenGL texture.
-    data = (GLubyte*) calloc(size.width * size.height * 4, sizeof(GLubyte));
-    context = CGBitmapContextCreate(data, size.width, size.height, 8, size.width * 4,
-                                    CGImageGetColorSpace(reference), kCGImageAlphaPremultipliedLast);
-    // Compensate for CoreGraphics' reveresed y/t axis
-    CGContextTranslateCTM (context, 0, size.height);
-    CGContextScaleCTM (context, 1.0, -1.0);
-		CGContextDrawImage(context, CGRectMake(0.0, 0.0, size.width, size.height), reference);
-		CGContextRelease(context);
-    glGenTextures(1, &name);
-		glBindTexture(GL_TEXTURE_2D, name);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, size.width, size.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
-    free(data);
-  }
-  [image release];
-  [self reset];
   return self;
 }
 
@@ -73,12 +83,6 @@
   glDisable(GL_BLEND);
 	glDisable(GL_TEXTURE_2D);
 	glPopMatrix();
-}
-
-
-- (void)drawAtPoint:(CGPoint)point;
-{
-  [self drawAtPoint:point withRect:CGRectMake(0, 0, size.width, size.height)];
 }
 
 

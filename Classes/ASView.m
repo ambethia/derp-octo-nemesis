@@ -12,6 +12,19 @@
 #import "ASView.h"
 #import "ASDirector.h"
 
+
+@interface ASView()
+
+- (void)draw;
+
+- (void)mainLoop;
+
+- (BOOL)createBuffers;
+- (void)destroyBuffers;
+
+@end
+
+
 @implementation ASView
 
 @synthesize context;

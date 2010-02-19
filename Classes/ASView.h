@@ -23,11 +23,6 @@
   ASDirector* director;
 }
 
-- (void)draw;
-- (void)mainLoop;
-- (BOOL)createBuffers;
-- (void)destroyBuffers;
-
-@property (nonatomic, retain) EAGLContext *context;
+@property (nonatomic, retain, readonly) EAGLContext *context;
 
 @end

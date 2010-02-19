@@ -9,6 +9,16 @@
 #import "ASDirector.h"
 #import "ASView.h"
 
+
+@interface ASDirector()
+
+@property (nonatomic, retain, readwrite) id <ASScene> scene;
+
+@property (nonatomic, retain) ASView* view;
+
+@end
+
+
 @implementation ASDirector
 
 @synthesize scene;

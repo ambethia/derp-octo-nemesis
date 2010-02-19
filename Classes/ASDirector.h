@@ -23,7 +23,6 @@
 
 - (void)setupOpenGL;
 
-@property (nonatomic, retain) id <ASScene> scene;
-@property (nonatomic, retain) ASView* view;
+@property (nonatomic, retain, readonly) id <ASScene> scene;
 
 @end

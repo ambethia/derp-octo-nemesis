@@ -26,9 +26,7 @@
 }
 
 - (id)initWithImagePath:(NSString*)path;
-- (void)draw;
-- (void)drawAtPoint:(CGPoint)point;
+
 - (void)drawAtPoint:(CGPoint)point withRect:(CGRect)rect;
-- (void)reset;
 
 @end
