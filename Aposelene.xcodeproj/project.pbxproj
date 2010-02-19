@@ -24,6 +24,7 @@
 		A4ECCE32112E493B008301EF /* tim-hovering.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4ECCE31112E493B008301EF /* tim-hovering.plist */; };
 		A4ECCFEB112EE30B008301EF /* ASAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECCFEA112EE30B008301EF /* ASAtlas.m */; };
 		A4ECD09F112EEB03008301EF /* SpriteDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECD09E112EEB03008301EF /* SpriteDemo.m */; };
+		A4ECD2B9112F0CEA008301EF /* ASSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECD2B8112F0CEA008301EF /* ASSprite.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		A4ECCFE9112EE30B008301EF /* ASAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAtlas.h; sourceTree = "<group>"; };
 		A4ECCFEA112EE30B008301EF /* ASAtlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAtlas.m; sourceTree = "<group>"; };
 		A4ECD09E112EEB03008301EF /* SpriteDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteDemo.m; sourceTree = "<group>"; };
+		A4ECD2B7112F0CEA008301EF /* ASSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASSprite.h; sourceTree = "<group>"; };
+		A4ECD2B8112F0CEA008301EF /* ASSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASSprite.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 				A42FA547112BE41700807DB1 /* ASDirector.h */,
 				A42FA548112BE41700807DB1 /* ASDirector.m */,
 				A42FA557112BE61300807DB1 /* ASScene.h */,
+				A4ECD2B7112F0CEA008301EF /* ASSprite.h */,
+				A4ECD2B8112F0CEA008301EF /* ASSprite.m */,
 				A41B1DA9112D078D00E75195 /* ASTexture.h */,
 				A41B1DAA112D078D00E75195 /* ASTexture.m */,
 				A42FA45C112BC90300807DB1 /* ASView.h */,
@@ -228,6 +233,7 @@
 				A41B1DEF112D0A1100E75195 /* SquareDemo.m in Sources */,
 				A4ECCFEB112EE30B008301EF /* ASAtlas.m in Sources */,
 				A4ECD09F112EEB03008301EF /* SpriteDemo.m in Sources */,
+				A4ECD2B9112F0CEA008301EF /* ASSprite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

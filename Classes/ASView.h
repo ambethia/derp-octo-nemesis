@@ -23,6 +23,8 @@
   ASDirector* director;
 }
 
+- (CGPoint)invertVerticalAxisInPoint:(CGPoint)point;
+
 @property (nonatomic, retain, readonly) EAGLContext *context;
 
 @end

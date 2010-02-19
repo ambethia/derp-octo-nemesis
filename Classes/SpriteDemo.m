@@ -14,6 +14,8 @@
 @interface SpriteDemo : NSObject <ASScene>
 {
   ASAtlas* atlas;
+  ASSprite* frozenSprite;
+  NSMutableArray* sprites;
 }
 
 @end
@@ -24,12 +26,19 @@
 
 - (void)update:(float)delta;
 {
+  [frozenSprite update:delta];
+  for (ASSprite* sprite in sprites) {
+    [sprite update:delta];
+  }
 }
 
 
 - (void)draw:(ASView*)view;
 {
-  [atlas drawFrame:0 AtPoint:CGPointMake(128, 176)];
+  [frozenSprite draw];
+  for (ASSprite* sprite in sprites) {
+    [sprite draw];
+  }
 }
 
 
@@ -38,13 +47,32 @@
   NSString *path = [[NSBundle mainBundle] pathForResource:@"tim-hovering" ofType:@"plist"];
   NSDictionary* dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
   atlas = [[ASAtlas alloc] initWithDictionary:dictionary];
+  frozenSprite = [[ASSprite alloc] initWithAtlas:atlas animation:@"Frozen"];
+  [frozenSprite setPosition:CGPointMake(20, 396)];
+  
+  sprites = [[NSMutableArray alloc] init];
+  
   [dictionary release];
 }
 
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
 {
-  [ASDirector load:@"MainMenu"];
+  ASSprite* sprite = [[ASSprite alloc] initWithAtlas:atlas animation:@"Hovering"];  
+  CGPoint position = [view invertVerticalAxisInPoint:[(UITouch*)[touches anyObject] locationInView:view]];
+  position.x -= 32;
+  position.y -= 32;
+  [sprite setPosition:position];
+  [sprites addObject:sprite];
+  [sprite release];
 }
 
+
+- (void)dealloc;
+{
+  [atlas release];
+  [frozenSprite release];
+  [sprites release];
+  [super dealloc];
+}
 
 @end

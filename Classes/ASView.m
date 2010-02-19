@@ -167,4 +167,13 @@
 }
 
 
+#pragma mark Point Conversion
+
+- (CGPoint)invertVerticalAxisInPoint:(CGPoint)point;
+{
+  point.y = [self bounds].size.height - point.y;
+  return point;
+}
+
+
 @end

@@ -10,5 +10,6 @@
 #import "ASCommon.h"
 #import "ASDirector.h"
 #import "ASScene.h"
+#import "ASSprite.h"
 #import "ASTexture.h"
 #import "ASView.h"

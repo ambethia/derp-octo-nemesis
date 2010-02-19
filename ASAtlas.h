@@ -7,19 +7,19 @@
 //
 
 
-typedef CGRect ASSpriteFrame;
-
 @class ASTexture;
 
 @interface ASAtlas : NSObject
 {
   ASTexture* texture;
-  ASSpriteFrame* frames;
+  CGRect* frames;
   NSDictionary* animations;
 }
 
 - (id)initWithDictionary:(NSDictionary*)dictionary;
 
 - (void)drawFrame:(int)frame AtPoint:(CGPoint)point;
+
+@property (nonatomic, retain) NSDictionary* animations;
 
 @end
