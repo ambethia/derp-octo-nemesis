@@ -27,8 +27,8 @@
 
 - (void)draw:(ASView*)view;
 {
-  [texture drawAtPoint:CGPointMake(128, 352) withRect:CGRectMake(0, 64, 64, 64)];
-  [texture drawAtPoint:CGPointMake(96, 176)];
+  [texture drawAtPoint:CGPointMake(96, 288)];
+  [texture drawAtPoint:CGPointMake(128, 176) withRect:CGRectMake(0, 64, 64, 64)];
 }
 
 
