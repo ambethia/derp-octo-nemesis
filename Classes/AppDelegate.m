@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ASView.h"
-#import "ASDirector.h"
+#import "Aposelene.h"
 
 
 @implementation AppDelegate
@@ -17,13 +16,10 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application;
 {
   window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
-
-  [ASDirector load:@"MainMenu"];
-  [window addSubview:[ASDirector view]];
-
 	[window setUserInteractionEnabled:YES];
   [window makeKeyAndVisible];
-
+  [window addSubview:[ASDirector view]];
+  [ASDirector load:@"MainMenu"];
   [[ASDirector view] performSelectorOnMainThread:@selector(mainLoop) withObject:nil waitUntilDone:NO];
 }
 

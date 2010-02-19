@@ -42,13 +42,12 @@
   };
 
   static const GLfloat vertices_btn3[] = {
-    20.0f, 280.0f, // BL
-    20.0f, 320.0f, // TL
+     20.0f, 280.0f, // BL
+     20.0f, 320.0f, // TL
     300.0f, 280.0f, // BR
     300.0f, 320.0f  // TR
   };
 
-  glClear(GL_COLOR_BUFFER_BIT);
   glEnableClientState(GL_VERTEX_ARRAY);
   
   glLoadIdentity();
@@ -78,17 +77,17 @@
   
   if (CGRectContainsPoint(CGRectMake(20, 40, 300, 40), touchLocation))
   {
-    [ASDirector load:@""];
+    [ASDirector load:@"SquareDemo"];
   }
 
   if (CGRectContainsPoint(CGRectMake(20, 100, 300, 40), touchLocation))
   {
-    [ASDirector load:@"SquareDemo"];
+    [ASDirector load:@"TextureDemo"];
   }
   
   if (CGRectContainsPoint(CGRectMake(20, 160, 300, 40), touchLocation))
   {
-    [ASDirector load:@"TextureDemo"];
+    [ASDirector load:@""];
   }
 }
 

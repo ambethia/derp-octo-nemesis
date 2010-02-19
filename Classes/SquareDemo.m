@@ -21,6 +21,9 @@
 
 - (void)update:(float)delta;
 {
+  static float trans = 0.0f;
+  glTranslatef((GLfloat)(cosf(trans)*0.5), (GLfloat)(sinf(trans)*0.5f), 0.0f);
+  trans += 0.02f;
 }
 
 
@@ -39,17 +42,12 @@
     0,     0,   0,   0,
     255,   0, 255, 255,
   };
-  
-	static float trans = 0.0f;
-  glTranslatef((GLfloat)(cosf(trans)*0.5), (GLfloat)(sinf(trans)*0.5f), 0.0f);
-	trans += 0.02f;
-	
-  glClear(GL_COLOR_BUFFER_BIT);
-  
-  glVertexPointer(2, GL_FLOAT, 0, squareVertices);
+
   glEnableClientState(GL_VERTEX_ARRAY);
-  glColorPointer(4, GL_UNSIGNED_BYTE, 0, squareColors);
   glEnableClientState(GL_COLOR_ARRAY);
+
+  glVertexPointer(2, GL_FLOAT, 0, squareVertices);
+  glColorPointer(4, GL_UNSIGNED_BYTE, 0, squareColors);
   
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 

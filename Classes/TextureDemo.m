@@ -27,7 +27,7 @@
 
 - (void)draw:(ASView*)view;
 {
-  glClear(GL_COLOR_BUFFER_BIT);
+  [texture drawAtPoint:CGPointMake(128, 352) withRect:CGRectMake(0, 64, 64, 64)];
   [texture drawAtPoint:CGPointMake(96, 176)];
 }
 
@@ -39,7 +39,7 @@
 
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
 {
-  [ASDirector load:@"Texture2Demo"];
+  [ASDirector load:@"MainMenu"];
 }
 
 

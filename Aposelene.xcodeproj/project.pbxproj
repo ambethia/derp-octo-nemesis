@@ -22,7 +22,6 @@
 		A42FA5BF112BEAD300807DB1 /* TextureDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA5BE112BEAD300807DB1 /* TextureDemo.m */; };
 		A42FA78A112C564600807DB1 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA789112C564600807DB1 /* MainMenu.m */; };
 		A4ECCE32112E493B008301EF /* tim-hovering.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4ECCE31112E493B008301EF /* tim-hovering.plist */; };
-		A4ECCF3E112E7BE6008301EF /* Texture2Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECCF3D112E7BE6008301EF /* Texture2Demo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +50,6 @@
 		A42FA78D112C56FE00807DB1 /* Aposelene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Aposelene.h; path = Classes/Aposelene.h; sourceTree = "<group>"; };
 		A4ECCE31112E493B008301EF /* tim-hovering.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tim-hovering.plist"; sourceTree = "<group>"; };
 		A4ECCED7112E68EA008301EF /* ASCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASCommon.h; sourceTree = "<group>"; };
-		A4ECCF3D112E7BE6008301EF /* Texture2Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Texture2Demo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +135,6 @@
 			children = (
 				A41B1DEE112D0A1100E75195 /* SquareDemo.m */,
 				A42FA5BE112BEAD300807DB1 /* TextureDemo.m */,
-				A4ECCF3D112E7BE6008301EF /* Texture2Demo.m */,
 				A42FA789112C564600807DB1 /* MainMenu.m */,
 			);
 			name = Scenes;
@@ -221,7 +218,6 @@
 				A42FA78A112C564600807DB1 /* MainMenu.m in Sources */,
 				A41B1DAB112D078D00E75195 /* ASTexture.m in Sources */,
 				A41B1DEF112D0A1100E75195 /* SquareDemo.m in Sources */,
-				A4ECCF3E112E7BE6008301EF /* Texture2Demo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

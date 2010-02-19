@@ -86,6 +86,7 @@
 - (void)draw;
 {
   glBindFramebufferOES(GL_FRAMEBUFFER_OES, viewFramebuffer);
+  glClear(GL_COLOR_BUFFER_BIT);
   [[director scene] draw:self];
   glBindRenderbufferOES(GL_RENDERBUFFER_OES, viewRenderbuffer);
   [context presentRenderbuffer:GL_RENDERBUFFER_OES];
