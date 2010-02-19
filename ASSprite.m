@@ -68,8 +68,6 @@
 - (void)draw;
 {
   [atlas drawFrame:frame AtPoint:position];
-  NSLog(@"%d -> %f", frame);
-
 }
 
 @end

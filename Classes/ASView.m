@@ -12,6 +12,7 @@
 #import "ASView.h"
 #import "ASDirector.h"
 
+#define LOG_FPS 0
 
 @interface ASView()
 
@@ -83,7 +84,8 @@
 {
   CFTimeInterval time;
   float          delta;
-  
+  static float   _fps = 0;
+
   while (true)
   {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -93,6 +95,17 @@
     
     [[director scene] update:delta];
     [self draw];
+
+    if (LOG_FPS)
+    {
+      _fps += delta;
+      if(_fps > 0.25f)
+      {
+        _fps = 0;
+        fps = 1.0f / (time - lastUpdate);
+      }
+    }
+
     lastUpdate = time;
     [pool release];
   }
@@ -106,6 +119,9 @@
   [[director scene] draw:self];
   glBindRenderbufferOES(GL_RENDERBUFFER_OES, viewRenderbuffer);
   [context presentRenderbuffer:GL_RENDERBUFFER_OES];
+
+  if(LOG_FPS)
+    NSLog(@"FPS: %1.0f", fps);
 }
 
 - (BOOL) createBuffers;

@@ -21,6 +21,7 @@
   GLint backingWidth;
   GLint backingHeight;
   ASDirector* director;
+  float fps;
 }
 
 - (CGPoint)invertVerticalAxisInPoint:(CGPoint)point;
