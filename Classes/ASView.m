@@ -48,9 +48,9 @@
     eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:NO],
                                     kEAGLDrawablePropertyRetainedBacking, kEAGLColorFormatRGBA8,
                                     kEAGLDrawablePropertyColorFormat, nil];
-    
+
     context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
-    
+
     if (!context || ![EAGLContext setCurrentContext:context])
 		{
       [self release];
@@ -96,7 +96,7 @@
     while(CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.002, TRUE) == kCFRunLoopRunHandledSource);
     time  = CFAbsoluteTimeGetCurrent();
     delta = (time - lastUpdate);
-    
+
     [[director scene] update:delta];
     [self draw];
 
@@ -149,16 +149,16 @@
   }
   [director setupOpenGL];
   [[director scene] setup:self];
-  return YES;  
+  return YES;
 }
 
 
 - (void)destroyBuffers;
-{    
+{
   glDeleteFramebuffersOES(1, &viewFramebuffer);
   viewFramebuffer = 0;
   glDeleteRenderbuffersOES(1, &viewRenderbuffer);
-  viewRenderbuffer = 0;  
+  viewRenderbuffer = 0;
 }
 
 
@@ -184,7 +184,7 @@
 {
   if ([[director scene] respondsToSelector:@selector(touchesEnded:withEvent:inView:)]) {
     [[director scene] touchesEnded:touches withEvent:event inView:self];
-  }  
+  }
 }
 
 

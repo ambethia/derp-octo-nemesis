@@ -33,12 +33,12 @@
     NSString* png = [[NSBundle mainBundle] pathForResource:fontName ofType:@"png"];
     NSString* contents = [NSString stringWithContentsOfFile:fnt encoding:NSASCIIStringEncoding error:nil];
     NSArray* lines = [[NSArray alloc] initWithArray:[contents componentsSeparatedByString:@"\n"]];
-    
+
     texture = [[ASTexture alloc] initWithImagePath:png];
-                
+
     characters = calloc(kMaxCharacters, sizeof(ASFontCharacter));
-                
-    
+
+
     for (NSString* line in lines)
     {
       if([line hasPrefix:@"char id"])
@@ -75,24 +75,19 @@
   unichar charID;
   ASFontCharacter character;
   CGPoint cursor = point;
-  CGRect frame;
+
 	for (int i = 0; i < [text length]; i++)
   {
     charID = [text characterAtIndex:i];
     character = characters[charID];
-
-    cursor.x += character.offset.x, 
+    // We adjust the baseline (y) to accomodate for packing in the original graphic
+    cursor.x += character.offset.x;
     cursor.y  = point.y - (character.offset.y + character.frame.size.height);
 
-    frame = CGRectMake(character.frame.origin.x,
-                       character.frame.origin.y,
-                       character.frame.size.width,
-                       character.frame.size.height);
-    
-    //    NSLog(@"-> %d %@", i, NSStringFromCGRect(frame));
-    
-    [texture drawAtPoint:cursor withRect:frame];
-        
+    // Drawing the texture to OpenGL every character is not very efficient,
+    // but it's easy enough for now. Ideally we'd satisfy the vertices and texture
+    // coordinates before hand, then pass those whole arrays on to be rendered.
+    [texture drawAtPoint:cursor withRect:character.frame];
     cursor.x += character.advance;
   }
 }

@@ -31,7 +31,7 @@
 }
 
 - (void)drawFrame:(int)frame AtPoint:(CGPoint)point;
-{  
+{
   [texture drawAtPoint:point withRect:frames[frame]];
 }
 

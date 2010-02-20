@@ -20,7 +20,7 @@ typedef struct {
 
 @interface ASFont : NSObject {
   ASTexture* texture;
-	ASFontCharacter	*characters;
+	ASFontCharacter* characters;
 }
 
 - (id)initWithFontFileNamed:(NSString*)fontName;

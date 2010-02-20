@@ -25,6 +25,7 @@
 
 #import "ASCommon.h"
 
+
 #define INVERT_TEXTURE_COORDS 1
 
 @interface ASTexture : NSObject

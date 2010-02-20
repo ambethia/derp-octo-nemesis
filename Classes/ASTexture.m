@@ -34,11 +34,11 @@
   {
     if(![path isAbsolutePath])
       path = [[NSBundle mainBundle] pathForResource:path ofType:nil];
-    
+
     image = [[UIImage alloc] initWithContentsOfFile:path];
     reference = [image CGImage];
     size = CGSizeMake(CGImageGetWidth(reference), CGImageGetHeight(reference));
-    
+
     if (reference)
     {
       // Copy the image data to memory, then bind it to an OpenGL texture.
@@ -81,7 +81,7 @@
 	glTexCoordPointer(2, GL_FLOAT, 0, &coordinates);
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
-	glDisableClientState(GL_TEXTURE_COORD_ARRAY);  
+	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 	glDisableClientState(GL_VERTEX_ARRAY);
   glDisable(GL_BLEND);
 	glDisable(GL_TEXTURE_2D);
@@ -160,7 +160,7 @@
 {
 	if(name)
     glDeleteTextures(1, &name);
-	
+
 	[super dealloc];
 }
 

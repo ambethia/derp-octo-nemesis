@@ -60,7 +60,7 @@
       keyframe = 0;
     }
   }
-  
+
   timer += delta;
 }
 
