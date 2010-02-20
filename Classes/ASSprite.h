@@ -14,6 +14,7 @@
 @interface ASSprite : NSObject {
   ASAtlas* atlas;
   CGPoint position;
+  CGSize size;
   Vertex2D velocity;
   NSArray* animation;
   int keyframe;
@@ -29,7 +30,7 @@
 - (id)initWithAtlas:(ASAtlas*)_atlas animation:(NSString*)_animation;
 
 @property (nonatomic) CGPoint position;
-
+@property (nonatomic, readonly) CGSize size;
 @property (nonatomic, readwrite) Vertex2D velocity;
 
 @end

@@ -21,11 +21,9 @@
 @implementation ASSprite
 
 @synthesize atlas;
-
 @synthesize animation;
-
 @synthesize position;
-
+@synthesize size;
 @synthesize velocity;
 
 - (id)initWithAtlas:(ASAtlas*)_atlas animation:(NSString*)_animation;
@@ -39,6 +37,10 @@
     delay = 0;
     timer = 0.0f;
     velocity = Vertex2DMake(0.0f, 0.0f);
+    // Initialize the size that of the first frame.
+    // This is probably good enough most of the time.
+    size = CGSizeMake([atlas frames][frame].size.width,
+                      [atlas frames][frame].size.height);
   }
   return self;
 }

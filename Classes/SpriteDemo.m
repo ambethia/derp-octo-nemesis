@@ -25,19 +25,32 @@
 
 - (void)update:(float)delta;
 {
-
-  for (ASSprite* sprite in sprites) {
-
-    if(sprite.position.x <= 0 || sprite.position.x >= 320)
+  for (ASSprite* sprite in sprites)
+  {
+    if(sprite.position.x <= 0 || sprite.position.x + sprite.size.width >= 320)
     {
+      if (sprite.position.x <= 0)
+      {
+        sprite.position = CGPointMake(0.0f, sprite.position.y);
+      }
+      else
+      {
+        sprite.position = CGPointMake(320.0f - sprite.size.width, sprite.position.y);
+      }
       sprite.velocity = Vertex2DMake(sprite.velocity.x * -1.0f, sprite.velocity.y);
     }
 
-    if(sprite.position.y <= 0 || sprite.position.y >= 480)
+    if(sprite.position.y <= 0 || sprite.position.y + sprite.size.height >= 480)
     {
+      if (sprite.position.y <= 0)
+      {
+        sprite.position = CGPointMake(sprite.position.x, 0.0f);
+      }
+      else {
+        sprite.position = CGPointMake(sprite.position.x, 480.0f - sprite.size.height);
+      }
       sprite.velocity = Vertex2DMake(sprite.velocity.x, sprite.velocity.y * -1.0f);
     }
-
     [sprite update:delta];
   }
 }
@@ -69,6 +82,7 @@
 
 - (void)setup:(ASView*)view;
 {
+  srandom(time(NULL));
   NSString *path = [[NSBundle mainBundle] pathForResource:@"tim-hovering" ofType:@"plist"];
   NSDictionary* dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
   atlas = [[ASAtlas alloc] initWithDictionary:dictionary];
@@ -90,7 +104,11 @@
   CGPoint position = [view invertVerticalAxisInPoint:touchLocation];
   position.x -= 32;
   position.y -= 32;
-  [sprite setVelocity:Vertex2DMake(-5.4f, -13.5f)];
+
+  Vertex2D velocity;
+  velocity.x = (random() % 100)-50;
+  velocity.y = (random() % 100)-50;
+  [sprite setVelocity:velocity];
   [sprite setPosition:position];
   [sprites addObject:sprite];
   [sprite release];

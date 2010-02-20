@@ -13,6 +13,7 @@
 @implementation ASAtlas
 
 @synthesize animations;
+@synthesize frames;
 
 - (id)initWithDictionary:(NSDictionary*)dictionary;
 {

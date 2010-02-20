@@ -21,5 +21,6 @@
 - (void)drawFrame:(int)frame AtPoint:(CGPoint)point;
 
 @property (nonatomic, retain) NSDictionary* animations;
+@property (nonatomic, readonly) CGRect* frames;
 
 @end
