@@ -11,8 +11,9 @@
 
 #import "ASView.h"
 #import "ASDirector.h"
+#import "ASFont.h"
 
-#define LOG_FPS 0
+#define SHOW_FPS 1
 
 @interface ASView()
 
@@ -56,6 +57,10 @@
     }
     lastUpdate = CFAbsoluteTimeGetCurrent();
     director = [ASDirector instance];
+
+    if (SHOW_FPS)
+      fpsFont = [[ASFont alloc] initWithFontFileNamed:@"silkscreen"];
+
   }
   return self;
 }
@@ -96,7 +101,7 @@
     [[director scene] update:delta];
     [self draw];
 
-    if (LOG_FPS)
+    if (SHOW_FPS)
     {
       _fps += delta;
       if(_fps > 0.25f)
@@ -115,13 +120,14 @@
 - (void)draw;
 {
   glBindFramebufferOES(GL_FRAMEBUFFER_OES, viewFramebuffer);
+
   glClear(GL_COLOR_BUFFER_BIT);
+  if(SHOW_FPS)
+    [fpsFont drawText:[NSString stringWithFormat:@"FPS: %1.0f", fps] atPoint:CGPointMake(3, 15)];
+
   [[director scene] draw:self];
   glBindRenderbufferOES(GL_RENDERBUFFER_OES, viewRenderbuffer);
   [context presentRenderbuffer:GL_RENDERBUFFER_OES];
-
-  if(LOG_FPS)
-    NSLog(@"FPS: %1.0f", fps);
 }
 
 - (BOOL) createBuffers;

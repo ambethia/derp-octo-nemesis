@@ -11,6 +11,7 @@
 
 
 @class ASDirector;
+@class ASFont;
 
 @interface ASView : UIView
 {
@@ -22,6 +23,7 @@
   GLint backingHeight;
   ASDirector* director;
   float fps;
+  ASFont* fpsFont;
 }
 
 - (CGPoint)invertVerticalAxisInPoint:(CGPoint)point;
