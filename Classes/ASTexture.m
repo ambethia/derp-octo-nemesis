@@ -77,6 +77,8 @@
 	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
   glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
 
+  glBindTexture(GL_TEXTURE_2D, name);
+
 	glVertexPointer(2, GL_FLOAT, 0, &vertices);
 	glTexCoordPointer(2, GL_FLOAT, 0, &coordinates);
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
