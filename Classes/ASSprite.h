@@ -6,12 +6,15 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
+#import "ASCommon.h"
+
 
 @class ASAtlas;
 
 @interface ASSprite : NSObject {
   ASAtlas* atlas;
   CGPoint position;
+  Vertex2D velocity;
   NSArray* animation;
   int keyframe;
   int frame;
@@ -26,5 +29,7 @@
 - (id)initWithAtlas:(ASAtlas*)_atlas animation:(NSString*)_animation;
 
 @property (nonatomic) CGPoint position;
+
+@property (nonatomic, readwrite) Vertex2D velocity;
 
 @end

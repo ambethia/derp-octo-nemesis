@@ -26,6 +26,8 @@
 
 @synthesize position;
 
+@synthesize velocity;
+
 - (id)initWithAtlas:(ASAtlas*)_atlas animation:(NSString*)_animation;
 {
   if (self = [super init])
@@ -36,6 +38,7 @@
     frame = 0;
     delay = 0;
     timer = 0.0f;
+    velocity = Vertex2DMake(0.0f, 0.0f);
   }
   return self;
 }
@@ -49,6 +52,9 @@
 
 - (void)update:(float)delta;
 {
+  position.x += (velocity.x * delta);
+  position.y += (velocity.y * delta);
+
   if (timer > delay/1000.0f) {
     // Extracting these values from the dictionary inside the game loop might be a peformance hit.
     // Looking at them every so many (delay) ms should mitigate some of that.
