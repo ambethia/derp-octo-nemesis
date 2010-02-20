@@ -11,7 +11,6 @@
 #import "ASTexture.h"
 #import "ASCommon.h"
 
-#define INVERT_TEXTURE_COORDS 1
 
 @interface ASTexture()
 
@@ -23,7 +22,6 @@
 
 
 @implementation ASTexture
-
 
 - (id)initWithImagePath:(NSString*)path;
 {
