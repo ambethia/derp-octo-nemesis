@@ -9,6 +9,7 @@
 #import "ASAtlas.h"
 #import "ASCommon.h"
 #import "ASDirector.h"
+#import "ASFont.h"
 #import "ASScene.h"
 #import "ASSprite.h"
 #import "ASTexture.h"

@@ -6,9 +6,122 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
+#import <regex.h>
+
 #import "ASFont.h"
+#import "ASTexture.h"
+
+
+@interface ASFont()
+
+- (NSString*)extractPattern:(NSString*)pattern fromLine:(NSString*)line;
+
+@property (nonatomic, retain) ASTexture* texture;
+
+@end
 
 
 @implementation ASFont
+
+@synthesize texture;
+
+- (id)initWithFontFileNamed:(NSString*)fontName;
+{
+  if (self = [super init])
+  {
+    NSString* fnt = [[NSBundle mainBundle] pathForResource:fontName ofType:@"fnt"];
+    NSString* png = [[NSBundle mainBundle] pathForResource:fontName ofType:@"png"];
+    NSString* contents = [NSString stringWithContentsOfFile:fnt encoding:NSASCIIStringEncoding error:nil];
+    NSArray* lines = [[NSArray alloc] initWithArray:[contents componentsSeparatedByString:@"\n"]];
+    
+    texture = [[ASTexture alloc] initWithImagePath:png];
+                
+    characters = calloc(kMaxCharacters, sizeof(ASFontCharacter));
+                
+    
+    for (NSString* line in lines)
+    {
+      if([line hasPrefix:@"char id"])
+      {
+        ASFontCharacter character;
+        character.charID = [[self extractPattern:@"char id=([-0-9]+)" fromLine:line] intValue];
+        character.frame = CGRectMake([[self extractPattern:@" x=([-0-9]+)" fromLine:line] intValue],
+                                     [[self extractPattern:@" y=([-0-9]+)" fromLine:line] intValue],
+                                     [[self extractPattern:@"width=([-0-9]+)" fromLine:line] intValue],
+                                     [[self extractPattern:@"height=([-0-9]+)" fromLine:line] intValue]);
+        character.offset = CGPointMake([[self extractPattern:@"xoffset=([-0-9]+)" fromLine:line] intValue],
+                                       [[self extractPattern:@"yoffset=([-0-9]+)" fromLine:line] intValue]);
+        character.advance = [[self extractPattern:@"xadvance=([-0-9]+)" fromLine:line] intValue];
+        characters[character.charID] = character;
+      }
+    }
+    [lines release];
+  }
+  return self;
+}
+
+- (void)dealloc;
+{
+  if (characters)
+    free(characters);
+
+  [texture release];
+  [super dealloc];
+}
+
+
+- (void)drawText:(NSString*)text atPoint:(CGPoint)point;
+{
+  unichar charID;
+  ASFontCharacter character;
+  CGPoint cursor = point;
+  CGRect frame;
+	for (int i = 0; i < [text length]; i++)
+  {
+    charID = [text characterAtIndex:i];
+    character = characters[charID];
+
+    cursor.x += character.offset.x, 
+    cursor.y  = point.y + character.offset.y;
+
+    frame = CGRectMake(character.frame.origin.x,
+                       character.frame.origin.y,
+                       character.frame.size.width,
+                       character.frame.size.height);
+    
+    //    NSLog(@"-> %d %@", i, NSStringFromCGRect(frame));
+    
+    [texture drawAtPoint:cursor withRect:frame];
+        
+    cursor.x += character.advance;
+  }
+}
+
+
+- (NSString*)extractPattern:(NSString*)pattern fromLine:(NSString*)line;
+{
+  int begin, end, length, i, w=0;
+  char *word = NULL;
+  regex_t regex;
+  regmatch_t match[2];
+  regcomp(&regex, [pattern UTF8String], REG_EXTENDED);
+  if ((regexec(&regex, [line UTF8String], 2, match, 0)) == 0)
+  {
+    begin  = (int)match[1].rm_so;
+    end    = (int)match[1].rm_eo;
+    length = end - begin;
+    word   = malloc(length+1);
+    for (i = begin; i < end; i++)
+    {
+      word[w] = [line UTF8String][i];
+      w++;
+    }
+    word[w] = 0;
+  }
+  regfree(&regex);
+  if (word)
+    return [NSString stringWithCString:word encoding:NSUTF8StringEncoding];
+  return @"";
+}
 
 @end

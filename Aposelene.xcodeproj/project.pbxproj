@@ -26,6 +26,9 @@
 		A4ECD09F112EEB03008301EF /* SpriteDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECD09E112EEB03008301EF /* SpriteDemo.m */; };
 		A4ECD2B9112F0CEA008301EF /* ASSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECD2B8112F0CEA008301EF /* ASSprite.m */; };
 		A4ECD46D112F4592008301EF /* ASFont.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECD46C112F4592008301EF /* ASFont.m */; };
+		A4ECD496112F5C75008301EF /* FontDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECD495112F5C75008301EF /* FontDemo.m */; };
+		A4ECD499112F622A008301EF /* silkscreen.fnt in Resources */ = {isa = PBXBuildFile; fileRef = A4ECD497112F622A008301EF /* silkscreen.fnt */; };
+		A4ECD49A112F622A008301EF /* silkscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECD498112F622A008301EF /* silkscreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		A4ECD2B8112F0CEA008301EF /* ASSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASSprite.m; path = Classes/ASSprite.m; sourceTree = "<group>"; };
 		A4ECD46B112F4592008301EF /* ASFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASFont.h; path = Classes/ASFont.h; sourceTree = "<group>"; };
 		A4ECD46C112F4592008301EF /* ASFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASFont.m; path = Classes/ASFont.m; sourceTree = "<group>"; };
+		A4ECD495112F5C75008301EF /* FontDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontDemo.m; sourceTree = "<group>"; };
+		A4ECD497112F622A008301EF /* silkscreen.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = silkscreen.fnt; sourceTree = "<group>"; };
+		A4ECD498112F622A008301EF /* silkscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = silkscreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A4ECD497112F622A008301EF /* silkscreen.fnt */,
+				A4ECD498112F622A008301EF /* silkscreen.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				A41B1C5D112CDF2E00E75195 /* tim-hovering.png */,
 				A4ECCE31112E493B008301EF /* tim-hovering.plist */,
@@ -144,6 +152,7 @@
 		A42FA5BC112BEAB700807DB1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A4ECD495112F5C75008301EF /* FontDemo.m */,
 				A41B1DEE112D0A1100E75195 /* SquareDemo.m */,
 				A42FA5BE112BEAD300807DB1 /* TextureDemo.m */,
 				A42FA789112C564600807DB1 /* MainMenu.m */,
@@ -161,6 +170,8 @@
 				A4ECCED7112E68EA008301EF /* ASCommon.h */,
 				A42FA547112BE41700807DB1 /* ASDirector.h */,
 				A42FA548112BE41700807DB1 /* ASDirector.m */,
+				A4ECD46B112F4592008301EF /* ASFont.h */,
+				A4ECD46C112F4592008301EF /* ASFont.m */,
 				A42FA557112BE61300807DB1 /* ASScene.h */,
 				A4ECD2B7112F0CEA008301EF /* ASSprite.h */,
 				A4ECD2B8112F0CEA008301EF /* ASSprite.m */,
@@ -168,8 +179,6 @@
 				A41B1DAA112D078D00E75195 /* ASTexture.m */,
 				A42FA45C112BC90300807DB1 /* ASView.h */,
 				A42FA45D112BC90300807DB1 /* ASView.m */,
-				A4ECD46B112F4592008301EF /* ASFont.h */,
-				A4ECD46C112F4592008301EF /* ASFont.m */,
 			);
 			name = Aposelene;
 			sourceTree = "<group>";
@@ -218,6 +227,8 @@
 			files = (
 				A41B1C5E112CDF2E00E75195 /* tim-hovering.png in Resources */,
 				A4ECCE32112E493B008301EF /* tim-hovering.plist in Resources */,
+				A4ECD499112F622A008301EF /* silkscreen.fnt in Resources */,
+				A4ECD49A112F622A008301EF /* silkscreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +251,7 @@
 				A4ECD09F112EEB03008301EF /* SpriteDemo.m in Sources */,
 				A4ECD2B9112F0CEA008301EF /* ASSprite.m in Sources */,
 				A4ECD46D112F4592008301EF /* ASFont.m in Sources */,
+				A4ECD496112F5C75008301EF /* FontDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

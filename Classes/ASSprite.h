@@ -17,7 +17,6 @@
   int frame;
   int delay;
   float timer;
-
 }
 
 - (void)update:(float)delta;

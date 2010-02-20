@@ -6,11 +6,25 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#define kMaxCharacters 256
 
+
+typedef struct {
+  int charID;
+  CGRect frame;
+  CGPoint offset;
+  int advance;
+} ASFontCharacter;
+
+@class ASTexture;
 
 @interface ASFont : NSObject {
-
+  ASTexture* texture;
+	ASFontCharacter	*characters;
 }
+
+- (id)initWithFontFileNamed:(NSString*)fontName;
+
+- (void)drawText:(NSString*)text atPoint:(CGPoint)point;
 
 @end
