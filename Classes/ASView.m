@@ -31,6 +31,7 @@
 
 @synthesize context;
 
+@synthesize font = _font;
 
 + (Class)layerClass;
 {
@@ -58,9 +59,7 @@
     lastUpdate = CFAbsoluteTimeGetCurrent();
     director = [ASDirector instance];
 
-    if (SHOW_FPS)
-      fpsFont = [[ASFont alloc] initWithFontFileNamed:@"silkscreen"];
-
+    _font = [[ASFont alloc] initWithFontFileNamed:@"silkscreen"];
   }
   return self;
 }
@@ -79,7 +78,7 @@
 {
   if ([EAGLContext currentContext] == context)
     [EAGLContext setCurrentContext:nil];
-
+  [_font release];
   [context release];
   [super dealloc];
 }
@@ -123,7 +122,7 @@
 
   glClear(GL_COLOR_BUFFER_BIT);
   if(SHOW_FPS)
-    [fpsFont drawText:[NSString stringWithFormat:@"FPS: %1.0f", fps] atPoint:CGPointMake(3, 15)];
+    [_font drawText:[NSString stringWithFormat:@"FPS: %1.0f", fps] atPoint:CGPointMake(5, 15)];
 
   [[director scene] draw:self];
   glBindRenderbufferOES(GL_RENDERBUFFER_OES, viewRenderbuffer);

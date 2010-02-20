@@ -23,11 +23,13 @@
   GLint backingHeight;
   ASDirector* director;
   float fps;
-  ASFont* fpsFont;
+  ASFont* _font;
 }
 
 - (CGPoint)invertVerticalAxisInPoint:(CGPoint)point;
 
 @property (nonatomic, retain, readonly) EAGLContext *context;
+
+@property (nonatomic, readonly) ASFont* font;
 
 @end
