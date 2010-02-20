@@ -11,6 +11,7 @@
 #import "ASTexture.h"
 #import "ASCommon.h"
 
+#define INVERT_TEXTURE_COORDS 1
 
 @interface ASTexture()
 
@@ -46,9 +47,11 @@
       data = (GLubyte*) calloc(size.width * size.height * 4, sizeof(GLubyte));
       context = CGBitmapContextCreate(data, size.width, size.height, 8, size.width * 4,
                                       CGImageGetColorSpace(reference), kCGImageAlphaPremultipliedLast);
-      // Compensate for CoreGraphics' reveresed y/t axis
-      CGContextTranslateCTM (context, 0, size.height);
-      CGContextScaleCTM (context, 1.0, -1.0);
+      if (!INVERT_TEXTURE_COORDS) {
+        // Compensate for CoreGraphics' reveresed y/t axis
+        CGContextTranslateCTM (context, 0, size.height);
+        CGContextScaleCTM (context, 1.0, -1.0);
+      }
       CGContextDrawImage(context, CGRectMake(0.0, 0.0, size.width, size.height), reference);
       CGContextRelease(context);
       glGenTextures(1, &name);
@@ -105,14 +108,28 @@
   vertices.v3.x = point.x + rect.size.width;
   vertices.v3.y = point.y + rect.size.height;
 
-  coordinates.v0.x = s0;
-  coordinates.v0.y = t0;
-  coordinates.v1.x = s1;
-  coordinates.v1.y = t0;
-  coordinates.v2.x = s0;
-  coordinates.v2.y = t1;
-  coordinates.v3.x = s1;
-  coordinates.v3.y = t1;
+  if (INVERT_TEXTURE_COORDS)
+  {
+    coordinates.v0.x = s0;
+    coordinates.v0.y = t1;
+    coordinates.v1.x = s1;
+    coordinates.v1.y = t1;
+    coordinates.v2.x = s0;
+    coordinates.v2.y = t0;
+    coordinates.v3.x = s1;
+    coordinates.v3.y = t0;
+  }
+  else
+  {
+    coordinates.v0.x = s0;
+    coordinates.v0.y = t0;
+    coordinates.v1.x = s1;
+    coordinates.v1.y = t0;
+    coordinates.v2.x = s0;
+    coordinates.v2.y = t1;
+    coordinates.v3.x = s1;
+    coordinates.v3.y = t1;
+  }
 
   [self draw];
 }

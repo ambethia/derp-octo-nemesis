@@ -82,7 +82,7 @@
     character = characters[charID];
 
     cursor.x += character.offset.x, 
-    cursor.y  = point.y + character.offset.y;
+    cursor.y  = point.y - (character.offset.y + character.frame.size.height);
 
     frame = CGRectMake(character.frame.origin.x,
                        character.frame.origin.y,

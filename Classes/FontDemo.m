@@ -29,7 +29,7 @@
 
 - (void)draw:(ASView*)view;
 {
-  [font drawText:@"Hello, world!" atPoint:CGPointMake(10, 10)];
+  [font drawText:@"Aposelene by Jason L. Perry" atPoint:CGPointMake(10, 470)];
 }
 
 
