@@ -21,6 +21,7 @@
 		A42FA549112BE41700807DB1 /* ASDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA548112BE41700807DB1 /* ASDirector.m */; };
 		A42FA5BF112BEAD300807DB1 /* TextureDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA5BE112BEAD300807DB1 /* TextureDemo.m */; };
 		A42FA78A112C564600807DB1 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA789112C564600807DB1 /* MainMenu.m */; };
+		A4D6540D1130DC71009041D7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A4D6540C1130DC71009041D7 /* Icon.png */; };
 		A4ECCE32112E493B008301EF /* tim-hovering.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4ECCE31112E493B008301EF /* tim-hovering.plist */; };
 		A4ECCFEB112EE30B008301EF /* ASAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECCFEA112EE30B008301EF /* ASAtlas.m */; };
 		A4ECD09F112EEB03008301EF /* SpriteDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECD09E112EEB03008301EF /* SpriteDemo.m */; };
@@ -55,6 +56,7 @@
 		A42FA5BE112BEAD300807DB1 /* TextureDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureDemo.m; sourceTree = "<group>"; };
 		A42FA789112C564600807DB1 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		A42FA78D112C56FE00807DB1 /* Aposelene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Aposelene.h; path = Classes/Aposelene.h; sourceTree = "<group>"; };
+		A4D6540C1130DC71009041D7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		A4ECCE31112E493B008301EF /* tim-hovering.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tim-hovering.plist"; sourceTree = "<group>"; };
 		A4ECCED7112E68EA008301EF /* ASCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASCommon.h; path = Classes/ASCommon.h; sourceTree = "<group>"; };
 		A4ECCFE9112EE30B008301EF /* ASAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASAtlas.h; path = Classes/ASAtlas.h; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A4D6540C1130DC71009041D7 /* Icon.png */,
 				A4ECD497112F622A008301EF /* silkscreen.fnt */,
 				A4ECD498112F622A008301EF /* silkscreen.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -229,6 +232,7 @@
 				A4ECCE32112E493B008301EF /* tim-hovering.plist in Resources */,
 				A4ECD499112F622A008301EF /* silkscreen.fnt in Resources */,
 				A4ECD49A112F622A008301EF /* silkscreen.png in Resources */,
+				A4D6540D1130DC71009041D7 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
