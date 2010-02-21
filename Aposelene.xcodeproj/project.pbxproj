@@ -296,8 +296,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* Demonstration */,
 				A40692E711318FB700ED25CE /* Aposelene */,
+				1D6058900D05DD3D006BFB54 /* Demonstration */,
 			);
 		};
 /* End PBXProject section */

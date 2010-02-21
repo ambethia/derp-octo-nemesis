@@ -73,6 +73,7 @@ typedef enum {
   NSDictionary* dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
   atlas = [[ASAtlas alloc] initWithDictionary:dictionary];
   sprite = [[ASSprite alloc] initWithAtlas:atlas animationKey:@"Idle"];
+  state = kChanIdleState;
   [sprite setPosition:CGPointMake(138, 0)];
   [dictionary release];
 }
