@@ -12,7 +12,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		A41B1C5E112CDF2E00E75195 /* tim-hovering.png in Resources */ = {isa = PBXBuildFile; fileRef = A41B1C5D112CDF2E00E75195 /* tim-hovering.png */; };
+		A41B1C5E112CDF2E00E75195 /* TimHovering.png in Resources */ = {isa = PBXBuildFile; fileRef = A41B1C5D112CDF2E00E75195 /* TimHovering.png */; };
 		A41B1DAB112D078D00E75195 /* ASTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B1DAA112D078D00E75195 /* ASTexture.m */; };
 		A41B1DEF112D0A1100E75195 /* SquareDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B1DEE112D0A1100E75195 /* SquareDemo.m */; };
 		A42FA45E112BC90300807DB1 /* ASView.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA45D112BC90300807DB1 /* ASView.m */; };
@@ -25,14 +25,14 @@
 		A481E63B11310C10002646E2 /* BikiniBibleChan.png in Resources */ = {isa = PBXBuildFile; fileRef = A481E63911310C10002646E2 /* BikiniBibleChan.png */; };
 		A481E63F11310C5D002646E2 /* AnimationDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A481E63E11310C5D002646E2 /* AnimationDemo.m */; };
 		A4D6540D1130DC71009041D7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A4D6540C1130DC71009041D7 /* Icon.png */; };
-		A4ECCE32112E493B008301EF /* tim-hovering.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4ECCE31112E493B008301EF /* tim-hovering.plist */; };
+		A4ECCE32112E493B008301EF /* TimHovering.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4ECCE31112E493B008301EF /* TimHovering.plist */; };
 		A4ECCFEB112EE30B008301EF /* ASAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECCFEA112EE30B008301EF /* ASAtlas.m */; };
 		A4ECD09F112EEB03008301EF /* SpriteDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECD09E112EEB03008301EF /* SpriteDemo.m */; };
 		A4ECD2B9112F0CEA008301EF /* ASSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECD2B8112F0CEA008301EF /* ASSprite.m */; };
 		A4ECD46D112F4592008301EF /* ASFont.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECD46C112F4592008301EF /* ASFont.m */; };
 		A4ECD496112F5C75008301EF /* FontDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECD495112F5C75008301EF /* FontDemo.m */; };
-		A4ECD499112F622A008301EF /* silkscreen.fnt in Resources */ = {isa = PBXBuildFile; fileRef = A4ECD497112F622A008301EF /* silkscreen.fnt */; };
-		A4ECD49A112F622A008301EF /* silkscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECD498112F622A008301EF /* silkscreen.png */; };
+		A4ECD499112F622A008301EF /* PixelFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = A4ECD497112F622A008301EF /* PixelFont.fnt */; };
+		A4ECD49A112F622A008301EF /* PixelFont.png in Resources */ = {isa = PBXBuildFile; fileRef = A4ECD498112F622A008301EF /* PixelFont.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		A41B1C5D112CDF2E00E75195 /* tim-hovering.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tim-hovering.png"; sourceTree = "<group>"; };
+		A41B1C5D112CDF2E00E75195 /* TimHovering.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TimHovering.png; sourceTree = "<group>"; };
 		A41B1DA9112D078D00E75195 /* ASTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASTexture.h; path = Classes/ASTexture.h; sourceTree = "<group>"; };
 		A41B1DAA112D078D00E75195 /* ASTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASTexture.m; path = Classes/ASTexture.m; sourceTree = "<group>"; };
 		A41B1DEE112D0A1100E75195 /* SquareDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareDemo.m; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		A481E63911310C10002646E2 /* BikiniBibleChan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BikiniBibleChan.png; sourceTree = "<group>"; };
 		A481E63E11310C5D002646E2 /* AnimationDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationDemo.m; sourceTree = "<group>"; };
 		A4D6540C1130DC71009041D7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		A4ECCE31112E493B008301EF /* tim-hovering.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tim-hovering.plist"; sourceTree = "<group>"; };
+		A4ECCE31112E493B008301EF /* TimHovering.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TimHovering.plist; sourceTree = "<group>"; };
 		A4ECCED7112E68EA008301EF /* ASCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASCommon.h; path = Classes/ASCommon.h; sourceTree = "<group>"; };
 		A4ECCFE9112EE30B008301EF /* ASAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASAtlas.h; path = Classes/ASAtlas.h; sourceTree = "<group>"; };
 		A4ECCFEA112EE30B008301EF /* ASAtlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASAtlas.m; path = Classes/ASAtlas.m; sourceTree = "<group>"; };
@@ -73,8 +73,8 @@
 		A4ECD46B112F4592008301EF /* ASFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASFont.h; path = Classes/ASFont.h; sourceTree = "<group>"; };
 		A4ECD46C112F4592008301EF /* ASFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASFont.m; path = Classes/ASFont.m; sourceTree = "<group>"; };
 		A4ECD495112F5C75008301EF /* FontDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontDemo.m; sourceTree = "<group>"; };
-		A4ECD497112F622A008301EF /* silkscreen.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = silkscreen.fnt; sourceTree = "<group>"; };
-		A4ECD498112F622A008301EF /* silkscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = silkscreen.png; sourceTree = "<group>"; };
+		A4ECD497112F622A008301EF /* PixelFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PixelFont.fnt; sourceTree = "<group>"; };
+		A4ECD498112F622A008301EF /* PixelFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PixelFont.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,14 +136,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				A4D6540C1130DC71009041D7 /* Icon.png */,
 				A481E63811310C10002646E2 /* BikiniBibleChan.plist */,
 				A481E63911310C10002646E2 /* BikiniBibleChan.png */,
-				A4D6540C1130DC71009041D7 /* Icon.png */,
-				A4ECD497112F622A008301EF /* silkscreen.fnt */,
-				A4ECD498112F622A008301EF /* silkscreen.png */,
-				8D1107310486CEB800E47090 /* Info.plist */,
-				A41B1C5D112CDF2E00E75195 /* tim-hovering.png */,
-				A4ECCE31112E493B008301EF /* tim-hovering.plist */,
+				A4ECD497112F622A008301EF /* PixelFont.fnt */,
+				A4ECD498112F622A008301EF /* PixelFont.png */,
+				A41B1C5D112CDF2E00E75195 /* TimHovering.png */,
+				A4ECCE31112E493B008301EF /* TimHovering.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -237,10 +237,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A41B1C5E112CDF2E00E75195 /* tim-hovering.png in Resources */,
-				A4ECCE32112E493B008301EF /* tim-hovering.plist in Resources */,
-				A4ECD499112F622A008301EF /* silkscreen.fnt in Resources */,
-				A4ECD49A112F622A008301EF /* silkscreen.png in Resources */,
+				A41B1C5E112CDF2E00E75195 /* TimHovering.png in Resources */,
+				A4ECCE32112E493B008301EF /* TimHovering.plist in Resources */,
+				A4ECD499112F622A008301EF /* PixelFont.fnt in Resources */,
+				A4ECD49A112F622A008301EF /* PixelFont.png in Resources */,
 				A4D6540D1130DC71009041D7 /* Icon.png in Resources */,
 				A481E63A11310C10002646E2 /* BikiniBibleChan.plist in Resources */,
 				A481E63B11310C10002646E2 /* BikiniBibleChan.png in Resources */,

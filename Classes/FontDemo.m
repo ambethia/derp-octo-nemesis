@@ -2,11 +2,9 @@
 //  FontDemo.m
 //  Aposelene
 //
-//  Created by Jason Perry on 2/19/10.
+//  Created by Jason L Perry on 2/19/10.
 //  Copyright 2010 Ambethia. All rights reserved.
 //
-
-
 
 #import "Aposelene.h"
 
@@ -35,7 +33,7 @@
 
 - (void)setup:(ASView*)view;
 {
-  font = [[ASFont alloc] initWithFontFileNamed:@"silkscreen"];
+  font = [[ASFont alloc] initWithFontFileNamed:@"PixelFont"];
 }
 
 

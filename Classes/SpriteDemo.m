@@ -2,11 +2,9 @@
 //  SpriteDemo.m
 //  Aposelene
 //
-//  Created by Jason Perry on 2/19/10.
+//  Created by Jason L Perry on 2/19/10.
 //  Copyright 2010 Ambethia. All rights reserved.
 //
-
-
 
 #import "Aposelene.h"
 
@@ -83,7 +81,7 @@
 - (void)setup:(ASView*)view;
 {
   srandom(time(NULL));
-  NSString *path = [[NSBundle mainBundle] pathForResource:@"tim-hovering" ofType:@"plist"];
+  NSString *path = [[NSBundle mainBundle] pathForResource:@"TimHovering" ofType:@"plist"];
   NSDictionary* dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
   atlas = [[ASAtlas alloc] initWithDictionary:dictionary];
   sprites = [[NSMutableArray alloc] init];

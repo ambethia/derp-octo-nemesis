@@ -2,7 +2,7 @@
 //  AnimationDemo.m
 //  Aposelene
 //
-//  Created by Jason Perry on 2/21/10.
+//  Created by Jason L Perry on 2/21/10.
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
@@ -82,7 +82,7 @@ typedef enum {
 {
   switch (state) {
     case kChanIdleState:
-      if ((random() % 2) - 1)
+      if (random() % 2)
       {
         state = kChanAttackAState;
         [sprite setAnimationKey:@"Attack A"];

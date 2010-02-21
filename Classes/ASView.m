@@ -59,7 +59,7 @@
     lastUpdate = CFAbsoluteTimeGetCurrent();
     director = [ASDirector instance];
 
-    _font = [[ASFont alloc] initWithFontFileNamed:@"silkscreen"];
+    _font = [[ASFont alloc] initWithFontFileNamed:@"PixelFont"];
   }
   return self;
 }

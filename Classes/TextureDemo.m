@@ -34,7 +34,7 @@
 
 - (void)setup:(ASView*)view;
 {      
-  texture = [[ASTexture alloc] initWithImagePath:@"tim-hovering.png"];
+  texture = [[ASTexture alloc] initWithImagePath:@"TimHovering.png"];
 }
 
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Texture</key>
-	<string>tim-hovering.png</string>
+	<string>TimHovering.png</string>
 	<key>Frames</key>
 	<array>
 		<dict>
