@@ -100,7 +100,7 @@
     return;
   }
 
-  ASSprite* sprite = [[ASSprite alloc] initWithAtlas:atlas animation:@"Hovering"];
+  ASSprite* sprite = [[ASSprite alloc] initWithAtlas:atlas animationKey:@"Hovering"];
   CGPoint position = [view invertVerticalAxisInPoint:touchLocation];
   position.x -= 32;
   position.y -= 32;

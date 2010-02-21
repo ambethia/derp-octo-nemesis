@@ -21,6 +21,9 @@
 		A42FA549112BE41700807DB1 /* ASDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA548112BE41700807DB1 /* ASDirector.m */; };
 		A42FA5BF112BEAD300807DB1 /* TextureDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA5BE112BEAD300807DB1 /* TextureDemo.m */; };
 		A42FA78A112C564600807DB1 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA789112C564600807DB1 /* MainMenu.m */; };
+		A481E63A11310C10002646E2 /* BikiniBibleChan.plist in Resources */ = {isa = PBXBuildFile; fileRef = A481E63811310C10002646E2 /* BikiniBibleChan.plist */; };
+		A481E63B11310C10002646E2 /* BikiniBibleChan.png in Resources */ = {isa = PBXBuildFile; fileRef = A481E63911310C10002646E2 /* BikiniBibleChan.png */; };
+		A481E63F11310C5D002646E2 /* AnimationDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A481E63E11310C5D002646E2 /* AnimationDemo.m */; };
 		A4D6540D1130DC71009041D7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A4D6540C1130DC71009041D7 /* Icon.png */; };
 		A4ECCE32112E493B008301EF /* tim-hovering.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4ECCE31112E493B008301EF /* tim-hovering.plist */; };
 		A4ECCFEB112EE30B008301EF /* ASAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ECCFEA112EE30B008301EF /* ASAtlas.m */; };
@@ -56,6 +59,9 @@
 		A42FA5BE112BEAD300807DB1 /* TextureDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureDemo.m; sourceTree = "<group>"; };
 		A42FA789112C564600807DB1 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		A42FA78D112C56FE00807DB1 /* Aposelene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Aposelene.h; path = Classes/Aposelene.h; sourceTree = "<group>"; };
+		A481E63811310C10002646E2 /* BikiniBibleChan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BikiniBibleChan.plist; sourceTree = "<group>"; };
+		A481E63911310C10002646E2 /* BikiniBibleChan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BikiniBibleChan.png; sourceTree = "<group>"; };
+		A481E63E11310C5D002646E2 /* AnimationDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationDemo.m; sourceTree = "<group>"; };
 		A4D6540C1130DC71009041D7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		A4ECCE31112E493B008301EF /* tim-hovering.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tim-hovering.plist"; sourceTree = "<group>"; };
 		A4ECCED7112E68EA008301EF /* ASCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASCommon.h; path = Classes/ASCommon.h; sourceTree = "<group>"; };
@@ -130,6 +136,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A481E63811310C10002646E2 /* BikiniBibleChan.plist */,
+				A481E63911310C10002646E2 /* BikiniBibleChan.png */,
 				A4D6540C1130DC71009041D7 /* Icon.png */,
 				A4ECD497112F622A008301EF /* silkscreen.fnt */,
 				A4ECD498112F622A008301EF /* silkscreen.png */,
@@ -160,6 +168,7 @@
 				A42FA5BE112BEAD300807DB1 /* TextureDemo.m */,
 				A42FA789112C564600807DB1 /* MainMenu.m */,
 				A4ECD09E112EEB03008301EF /* SpriteDemo.m */,
+				A481E63E11310C5D002646E2 /* AnimationDemo.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -233,6 +242,8 @@
 				A4ECD499112F622A008301EF /* silkscreen.fnt in Resources */,
 				A4ECD49A112F622A008301EF /* silkscreen.png in Resources */,
 				A4D6540D1130DC71009041D7 /* Icon.png in Resources */,
+				A481E63A11310C10002646E2 /* BikiniBibleChan.plist in Resources */,
+				A481E63B11310C10002646E2 /* BikiniBibleChan.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +267,7 @@
 				A4ECD2B9112F0CEA008301EF /* ASSprite.m in Sources */,
 				A4ECD46D112F4592008301EF /* ASFont.m in Sources */,
 				A4ECD496112F5C75008301EF /* FontDemo.m in Sources */,
+				A481E63F11310C5D002646E2 /* AnimationDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

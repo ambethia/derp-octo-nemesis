@@ -50,41 +50,61 @@
 	<key>Animations</key>
 	<dict>
 		<key>Frozen</key>
-		<array>
+		<dict>
+			<key>Offset</key>
 			<dict>
-				<key>Frame</key>
+				<key>X</key>
 				<integer>0</integer>
-				<key>Delay</key>
-				<integer>100</integer>
+				<key>Y</key>
+				<integer>0</integer>
 			</dict>
-		</array>
+			<key>Frames</key>
+			<array>
+				<dict>
+					<key>Frame</key>
+					<integer>0</integer>
+					<key>Delay</key>
+					<integer>100</integer>
+				</dict>
+			</array>
+		</dict>
 		<key>Hovering</key>
-		<array>
+		<dict>
+			<key>Offset</key>
 			<dict>
-				<key>Frame</key>
+				<key>X</key>
 				<integer>0</integer>
-				<key>Delay</key>
-				<integer>100</integer>
+				<key>Y</key>
+				<integer>0</integer>
 			</dict>
-			<dict>
-				<key>Frame</key>
-				<integer>1</integer>
-				<key>Delay</key>
-				<integer>100</integer>
-			</dict>
-			<dict>
-				<key>Frame</key>
-				<integer>2</integer>
-				<key>Delay</key>
-				<integer>100</integer>
-			</dict>
-			<dict>
-				<key>Frame</key>
-				<integer>3</integer>
-				<key>Delay</key>
-				<integer>100</integer>
-			</dict>
-		</array>
+			<key>Frames</key>
+			<array>
+				<dict>
+					<key>Frame</key>
+					<integer>0</integer>
+					<key>Delay</key>
+					<integer>100</integer>
+				</dict>
+				<dict>
+					<key>Frame</key>
+					<integer>1</integer>
+					<key>Delay</key>
+					<integer>100</integer>
+				</dict>
+				<dict>
+					<key>Frame</key>
+					<integer>2</integer>
+					<key>Delay</key>
+					<integer>100</integer>
+				</dict>
+				<dict>
+					<key>Frame</key>
+					<integer>3</integer>
+					<key>Delay</key>
+					<integer>100</integer>
+				</dict>
+			</array>
+		</dict>
 	</dict>
 </dict>
 </plist>

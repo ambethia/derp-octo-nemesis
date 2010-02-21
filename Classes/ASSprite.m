@@ -13,7 +13,7 @@
 
 @property (nonatomic, retain) ASAtlas* atlas;
 
-@property (nonatomic, retain) NSArray* animation;
+@property (nonatomic, retain) NSDictionary* animation;
 
 @end
 
@@ -22,16 +22,19 @@
 
 @synthesize atlas;
 @synthesize animation;
+@synthesize animationKey;
 @synthesize position;
 @synthesize size;
 @synthesize velocity;
+@synthesize keyframe;
 
-- (id)initWithAtlas:(ASAtlas*)_atlas animation:(NSString*)_animation;
+- (id)initWithAtlas:(ASAtlas*)_atlas animationKey:(NSString*)_animationKey;
 {
   if (self = [super init])
   {
     [self setAtlas:_atlas];
-    [self setAnimation:[[atlas animations] objectForKey:_animation]];
+    
+    [self setAnimationKey:_animationKey];
     keyframe = 0;
     frame = 0;
     delay = 0;
@@ -45,12 +48,21 @@
   return self;
 }
 
+
 - (void)dealloc;
 {
   [atlas release];
   [animation release];
   [super dealloc];
 }
+
+
+- (void)setAnimationKey:(NSString *)_animationKey;
+{
+  [self setAnimation:[[atlas animations] valueForKey:_animationKey]];
+  keyframe = 0;
+}
+
 
 - (void)update:(float)delta;
 {
@@ -60,11 +72,12 @@
   if (timer > delay/1000.0f) {
     // Extracting these values from the dictionary inside the game loop might be a peformance hit.
     // Looking at them every so many (delay) ms should mitigate some of that.
-    frame = [(NSNumber*)[(NSDictionary*)[animation objectAtIndex:keyframe] valueForKey:@"Frame"] intValue];
-    delay = [(NSNumber*)[(NSDictionary*)[animation objectAtIndex:keyframe] valueForKey:@"Delay"] intValue];
+    frame = [(NSNumber*)[(NSDictionary*)[[animation valueForKey:@"Frames"] objectAtIndex:keyframe] valueForKey:@"Frame"] intValue];
+    delay = [(NSNumber*)[(NSDictionary*)[[animation valueForKey:@"Frames"] objectAtIndex:keyframe] valueForKey:@"Delay"] intValue];
+    CGPointMakeWithDictionaryRepresentation((CFDictionaryRef)[animation valueForKey:@"Offset"], &offset);
     timer = 0.0f;
     keyframe++;
-    if (keyframe >= [animation count]) {
+    if (keyframe >= [[animation valueForKey:@"Frames"] count]) {
       keyframe = 0;
     }
   }
@@ -75,7 +88,7 @@
 
 - (void)draw;
 {
-  [atlas drawFrame:frame AtPoint:position];
+  [atlas drawFrame:frame AtPoint:CGPointMake(position.x + offset.x, position.y + offset.y)];
 }
 
 @end
