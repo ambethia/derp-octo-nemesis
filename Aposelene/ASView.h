@@ -6,6 +6,7 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/ES1/gl.h>
 

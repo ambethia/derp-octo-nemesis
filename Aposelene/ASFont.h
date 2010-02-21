@@ -6,8 +6,11 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
-#define kMaxCharacters 256
+#import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
+
+#define kMaxCharacters 256
 
 typedef struct {
   int charID;

@@ -7,6 +7,7 @@
 //
 
 #import <OpenGLES/ES1/gl.h>
+#import <UIKit/UIKit.h>
 
 #import "ASTexture.h"
 #import "ASCommon.h"

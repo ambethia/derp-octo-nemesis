@@ -6,6 +6,7 @@
 //  Copyright 2010 Ambethia. All rights reserved.
 //
 
+#import <CoreGraphics/CoreGraphics.h>
 #import <OpenGLES/ES1/gl.h>
 
 #pragma mark Vertex2D

@@ -23,6 +23,8 @@
 //   (0, 1)     (1, 1)
 //
 
+#import <Foundation/Foundation.h>
+
 #import "ASCommon.h"
 
 
