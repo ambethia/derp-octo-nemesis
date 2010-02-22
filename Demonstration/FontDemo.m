@@ -27,13 +27,14 @@
 
 - (void)draw:(ASView*)view;
 {
-  [font drawText:@"Aposelene by Jason L. Perry" atPoint:CGPointMake(10, 470)];
+  [font drawText:@"Aposelene, by Jason L. Perry" atPoint:CGPointMake(10, 470)];
 }
 
 
 - (void)setup:(ASView*)view;
 {
   font = [[ASFont alloc] initWithFontFileNamed:@"PixelFont"];
+  [font setColorFilterRed:0.9f green:0.0f blue:0.0f alpha:1.0f];
 }
 
 

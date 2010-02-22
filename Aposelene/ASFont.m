@@ -38,6 +38,7 @@
 
     characters = calloc(kMaxCharacters, sizeof(ASFontCharacter));
 
+    colorFilter = ASColorMake(1.0f, 1.0f, 1.0f, 1.0f);
 
     for (NSString* line in lines)
     {
@@ -69,7 +70,11 @@
   [super dealloc];
 }
 
-
+// TODO: Drawing the texture to OpenGL every character is not very efficient,
+// but it's easy enough for now. Ideally we'd satisfy the vertices and texture
+// coordinates before hand, then pass those whole arrays on to be rendered.
+// TODO: Setting glColor4f will work here until we implement colors in ASTexture.
+// We adjust the baseline (cursor.y) to accomodate for packing in the original graphic.
 - (void)drawText:(NSString*)text atPoint:(CGPoint)point;
 {
   unichar charID;
@@ -80,14 +85,11 @@
   {
     charID = [text characterAtIndex:i];
     character = characters[charID];
-    // We adjust the baseline (y) to accomodate for packing in the original graphic
     cursor.x += character.offset.x;
     cursor.y  = point.y - (character.offset.y + character.frame.size.height);
-
-    // Drawing the texture to OpenGL every character is not very efficient,
-    // but it's easy enough for now. Ideally we'd satisfy the vertices and texture
-    // coordinates before hand, then pass those whole arrays on to be rendered.
+    glColor4f(colorFilter.red, colorFilter.green, colorFilter.blue, colorFilter.alpha);
     [texture drawAtPoint:cursor withRect:character.frame];
+    glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
     cursor.x += character.advance;
   }
 }
@@ -100,6 +102,7 @@
   regex_t regex;
   regmatch_t match[2];
   regcomp(&regex, [pattern UTF8String], REG_EXTENDED);
+
   if ((regexec(&regex, [line UTF8String], 2, match, 0)) == 0)
   {
     begin  = (int)match[1].rm_so;
@@ -117,6 +120,11 @@
   if (word)
     return [NSString stringWithCString:word encoding:NSUTF8StringEncoding];
   return @"";
+}
+
+- (void)setColorFilterRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;
+{
+  colorFilter = ASColorMake(red, green, blue, alpha);
 }
 
 @end

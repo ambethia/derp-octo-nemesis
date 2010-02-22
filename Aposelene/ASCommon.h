@@ -42,3 +42,22 @@ static inline Quad2D Quad2DMake(Vertex2D v0, Vertex2D v1, Vertex2D v2, Vertex2D 
   quad2D.v3 = v3;
 	return quad2D;
 }
+
+#pragma mark ASColor
+
+typedef struct {
+	GLfloat	red;
+	GLfloat	green;
+	GLfloat	blue;
+	GLfloat alpha;
+} ASColor;
+
+static inline ASColor ASColorMake(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha)
+{
+  ASColor color;
+	color.red   = red;
+	color.green = green;
+	color.blue  = blue;
+	color.alpha = alpha;
+  return color;
+}

@@ -21,12 +21,12 @@
 
 - (void)update:(float)delta;
 {
-  
+
 }
 
 
 - (void)draw:(ASView*)view;
-{  
+{
   static const GLfloat vertices_btn1[] = {
      20.0f, 400.0f, // BL
      20.0f, 440.0f, // TL
@@ -49,32 +49,32 @@
   };
 
   glEnableClientState(GL_VERTEX_ARRAY);
-  
+
   glLoadIdentity();
 
   glVertexPointer(2, GL_FLOAT, 0, vertices_btn1);
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-  
+
   glVertexPointer(2, GL_FLOAT, 0, vertices_btn2);
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
   glVertexPointer(2, GL_FLOAT, 0, vertices_btn3);
   glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-  
+
   glDisableClientState(GL_VERTEX_ARRAY);
 }
 
 
 - (void)setup:(ASView*)view;
-{ 
+{
   glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
 }
 
 
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
 {
-  CGPoint touchLocation = [[touches anyObject] locationInView:view];  
-  
+  CGPoint touchLocation = [[touches anyObject] locationInView:view];
+
   if (CGRectContainsPoint(CGRectMake(20, 40, 300, 40), touchLocation))
   {
     [ASDirector load:@"SpriteDemo"];
@@ -84,10 +84,10 @@
   {
     [ASDirector load:@"AnimationDemo"];
   }
-  
+
   if (CGRectContainsPoint(CGRectMake(20, 160, 300, 40), touchLocation))
   {
-    [ASDirector load:@""];
+    [ASDirector load:@"FontDemo"];
   }
 }
 
