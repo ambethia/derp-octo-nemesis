@@ -69,6 +69,7 @@ typedef enum {
 
 - (void)setup:(ASView*)view;
 {
+  glClearColor(0.69f, 0.2f, 0.2f, 0.0f);
   NSString *path = [[NSBundle mainBundle] pathForResource:@"BikiniBibleChan" ofType:@"plist"];
   NSDictionary* dictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
   atlas = [[ASAtlas alloc] initWithDictionary:dictionary];
