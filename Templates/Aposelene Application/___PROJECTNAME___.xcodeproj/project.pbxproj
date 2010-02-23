@@ -12,12 +12,13 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		A403E1351133A92A00AE6434 /* libAposelene.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A403E11A1133A83D00AE6434 /* libAposelene.a */; };
-		A403E17C1133ACF200AE6434 /* OpeningScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A403E17B1133ACF200AE6434 /* OpeningScene.m */; };
+		A403E17C1133ACF200AE6434 /* ___PROJECTNAMEASIDENTIFIER___Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = A403E17B1133ACF200AE6434 /* ___PROJECTNAMEASIDENTIFIER___Scene.m */; };
 		A45BCFE41133A3D500F9CBC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A45BCFE31133A3D500F9CBC5 /* main.m */; };
 		A45BCFE61133A3FF00F9CBC5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45BCFE51133A3FF00F9CBC5 /* OpenGLES.framework */; };
 		A45BCFE81133A3FF00F9CBC5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45BCFE71133A3FF00F9CBC5 /* QuartzCore.framework */; };
 		A45BCFEF1133A59000F9CBC5 /* ASPixel.fnt in Resources */ = {isa = PBXBuildFile; fileRef = A45BCFED1133A59000F9CBC5 /* ASPixel.fnt */; };
 		A45BCFF01133A59000F9CBC5 /* ASPixel.png in Resources */ = {isa = PBXBuildFile; fileRef = A45BCFEE1133A59000F9CBC5 /* ASPixel.png */; };
+		A4B5FCC711341E7F00F1545C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B5FCC611341E7F00F1545C /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,13 +55,14 @@
 		32CA4F630368D1EE00C91783 /* ___PROJECTNAMEASIDENTIFIER____Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "___PROJECTNAMEASIDENTIFIER____Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ___PROJECTNAMEASIDENTIFIER___-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "___PROJECTNAMEASIDENTIFIER___-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		A403E10F1133A83D00AE6434 /* Aposelene.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Aposelene.xcodeproj; path = ../../../Developer/Source/Aposelene/Aposelene.xcodeproj; sourceTree = APOSELENE_SRC; };
-		A403E17A1133ACF200AE6434 /* OpeningScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpeningScene.h; path = "Source/Aposelene/Templates/Aposelene Application/Classes/OpeningScene.h"; sourceTree = DEVELOPER_DIR; };
-		A403E17B1133ACF200AE6434 /* OpeningScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpeningScene.m; path = "Source/Aposelene/Templates/Aposelene Application/Classes/OpeningScene.m"; sourceTree = DEVELOPER_DIR; };
-		A45BCFE31133A3D500F9CBC5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Source/Aposelene/Templates/Aposelene Application/main.m"; sourceTree = DEVELOPER_DIR; };
+		A403E17A1133ACF200AE6434 /* ___PROJECTNAMEASIDENTIFIER___Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "___PROJECTNAMEASIDENTIFIER___Scene.h"; sourceTree = "<group>"; };
+		A403E17B1133ACF200AE6434 /* ___PROJECTNAMEASIDENTIFIER___Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "___PROJECTNAMEASIDENTIFIER___Scene.m"; sourceTree = "<group>"; };
+		A45BCFE31133A3D500F9CBC5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A45BCFE51133A3FF00F9CBC5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A45BCFE71133A3FF00F9CBC5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A45BCFED1133A59000F9CBC5 /* ASPixel.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ASPixel.fnt; path = "Source/Aposelene/Templates/Aposelene Application/Resources/ASPixel.fnt"; sourceTree = DEVELOPER_DIR; };
 		A45BCFEE1133A59000F9CBC5 /* ASPixel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ASPixel.png; path = "Source/Aposelene/Templates/Aposelene Application/Resources/ASPixel.png"; sourceTree = DEVELOPER_DIR; };
+		A4B5FCC611341E7F00F1545C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "Source/Aposelene/Templates/Aposelene Application/Resources/Icon.png"; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +87,8 @@
 			children = (
 				1D3623240D0F684500981E51 /* ___PROJECTNAMEASIDENTIFIER___AppDelegate.h */,
 				1D3623250D0F684500981E51 /* ___PROJECTNAMEASIDENTIFIER___AppDelegate.m */,
-				A403E17A1133ACF200AE6434 /* OpeningScene.h */,
-				A403E17B1133ACF200AE6434 /* OpeningScene.m */,
+				A403E17A1133ACF200AE6434 /* ___PROJECTNAMEASIDENTIFIER___Scene.h */,
+				A403E17B1133ACF200AE6434 /* ___PROJECTNAMEASIDENTIFIER___Scene.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -124,6 +126,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A4B5FCC611341E7F00F1545C /* Icon.png */,
 				A45BCFED1133A59000F9CBC5 /* ASPixel.fnt */,
 				A45BCFEE1133A59000F9CBC5 /* ASPixel.png */,
 				8D1107310486CEB800E47090 /* ___PROJECTNAMEASIDENTIFIER___-Info.plist */,
@@ -228,6 +231,7 @@
 			files = (
 				A45BCFEF1133A59000F9CBC5 /* ASPixel.fnt in Resources */,
 				A45BCFF01133A59000F9CBC5 /* ASPixel.png in Resources */,
+				A4B5FCC711341E7F00F1545C /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +244,7 @@
 			files = (
 				1D3623260D0F684500981E51 /* ___PROJECTNAMEASIDENTIFIER___AppDelegate.m in Sources */,
 				A45BCFE41133A3D500F9CBC5 /* main.m in Sources */,
-				A403E17C1133ACF200AE6434 /* OpeningScene.m in Sources */,
+				A403E17C1133ACF200AE6434 /* ___PROJECTNAMEASIDENTIFIER___Scene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

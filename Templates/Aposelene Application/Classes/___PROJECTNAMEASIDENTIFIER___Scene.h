@@ -1,5 +1,5 @@
 //
-//  OpeningScene.h
+//  ___PROJECTNAMEASIDENTIFIER___Scene.h
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
@@ -8,7 +8,7 @@
 
 #import "Aposelene.h"
 
-@interface OpeningScene : NSObject <ASScene>
+@interface ___PROJECTNAMEASIDENTIFIER___Scene : NSObject <ASScene>
 {
   ASFont* font;
 }
