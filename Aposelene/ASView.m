@@ -119,7 +119,6 @@
 
 - (void)draw;
 {
-  NSLog(@"-> %d", [director landscapeMode]);
   glBindFramebufferOES(GL_FRAMEBUFFER_OES, viewFramebuffer);
 
   glClear(GL_COLOR_BUFFER_BIT);
