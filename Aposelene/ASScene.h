@@ -26,4 +26,6 @@
 
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event inView:(ASView*)view;
 
+- (void)willLoadNextScene:(id)scene;
+
 @end

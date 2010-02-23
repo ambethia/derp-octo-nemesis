@@ -8,13 +8,13 @@
 
 #import "ASScene.h"
 
-
 @class ASView;
 
 @interface ASDirector : NSObject
 {
   id <ASScene> scene;
   ASView* view;
+  bool landscapeMode;
 }
 
 + (ASDirector*)instance;
@@ -24,5 +24,6 @@
 - (void)setupOpenGL;
 
 @property (nonatomic, retain, readonly) id <ASScene> scene;
+@property (nonatomic, assign) bool landscapeMode;
 
 @end

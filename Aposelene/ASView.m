@@ -23,6 +23,7 @@
 
 - (BOOL)createBuffers;
 - (void)destroyBuffers;
+- (void)applyOrientation;
 
 @end
 
@@ -118,13 +119,22 @@
 
 - (void)draw;
 {
+  NSLog(@"-> %d", [director landscapeMode]);
   glBindFramebufferOES(GL_FRAMEBUFFER_OES, viewFramebuffer);
 
   glClear(GL_COLOR_BUFFER_BIT);
+
+  glPushMatrix();
+
+  [self applyOrientation];
+
+  [[director scene] draw:self];
+
   if(SHOW_FPS)
     [_font drawText:[NSString stringWithFormat:@"FPS: %1.0f", fps] atPoint:CGPointMake(5, 15)];
 
-  [[director scene] draw:self];
+  glPopMatrix();
+
   glBindRenderbufferOES(GL_RENDERBUFFER_OES, viewRenderbuffer);
   [context presentRenderbuffer:GL_RENDERBUFFER_OES];
 }
@@ -159,6 +169,21 @@
   viewFramebuffer = 0;
   glDeleteRenderbuffersOES(1, &viewRenderbuffer);
   viewRenderbuffer = 0;
+}
+
+
+- (void)applyOrientation;
+{
+  CGSize s = [self frame].size;
+  float w = s.width / 2;
+  float h = s.height / 2;
+
+  if ([director landscapeMode])
+  {
+    glTranslatef(w,h,0);
+    glRotatef(90,0,0,1);
+    glTranslatef(-h,-w,0);
+  }
 }
 
 

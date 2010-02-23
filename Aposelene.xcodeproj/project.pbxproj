@@ -39,6 +39,7 @@
 		A42FA4B3112BCF0900807DB1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42FA4B2112BCF0900807DB1 /* OpenGLES.framework */; };
 		A42FA5BF112BEAD300807DB1 /* TextureDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA5BE112BEAD300807DB1 /* TextureDemo.m */; };
 		A42FA78A112C564600807DB1 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A42FA789112C564600807DB1 /* MainMenu.m */; };
+		A4634E34113368B80008F0DD /* LandscapeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4634E33113368B80008F0DD /* LandscapeDemo.m */; };
 		A481E63A11310C10002646E2 /* BikiniBibleChan.plist in Resources */ = {isa = PBXBuildFile; fileRef = A481E63811310C10002646E2 /* BikiniBibleChan.plist */; };
 		A481E63B11310C10002646E2 /* BikiniBibleChan.png in Resources */ = {isa = PBXBuildFile; fileRef = A481E63911310C10002646E2 /* BikiniBibleChan.png */; };
 		A481E63F11310C5D002646E2 /* AnimationDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A481E63E11310C5D002646E2 /* AnimationDemo.m */; };
@@ -85,6 +86,7 @@
 		A42FA5BE112BEAD300807DB1 /* TextureDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureDemo.m; sourceTree = "<group>"; };
 		A42FA789112C564600807DB1 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		A42FA78D112C56FE00807DB1 /* Aposelene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aposelene.h; sourceTree = "<group>"; };
+		A4634E33113368B80008F0DD /* LandscapeDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandscapeDemo.m; path = Source/Aposelene/Demonstration/LandscapeDemo.m; sourceTree = DEVELOPER_DIR; };
 		A481E63811310C10002646E2 /* BikiniBibleChan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BikiniBibleChan.plist; sourceTree = "<group>"; };
 		A481E63911310C10002646E2 /* BikiniBibleChan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BikiniBibleChan.png; sourceTree = "<group>"; };
 		A481E63E11310C5D002646E2 /* AnimationDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationDemo.m; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				A4ECD09E112EEB03008301EF /* SpriteDemo.m */,
 				A41B1DEE112D0A1100E75195 /* SquareDemo.m */,
 				A42FA5BE112BEAD300807DB1 /* TextureDemo.m */,
+				A4634E33113368B80008F0DD /* LandscapeDemo.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				A4ECD09F112EEB03008301EF /* SpriteDemo.m in Sources */,
 				A4ECD496112F5C75008301EF /* FontDemo.m in Sources */,
 				A481E63F11310C5D002646E2 /* AnimationDemo.m in Sources */,
+				A4634E34113368B80008F0DD /* LandscapeDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

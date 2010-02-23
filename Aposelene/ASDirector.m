@@ -23,6 +23,7 @@
 
 @synthesize scene;
 @synthesize view;
+@synthesize landscapeMode;
 
 + (ASDirector*)instance;
 {
@@ -58,6 +59,9 @@
   if (klass)
   {
     id _scene = [[klass alloc] init];
+    if ([[[self instance] scene] respondsToSelector:@selector(willLoadNextScene:)]) {
+      [[[self instance] scene] willLoadNextScene:_scene];
+    }
     [[self instance] setScene:_scene];
     [_scene release];
   }

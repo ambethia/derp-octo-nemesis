@@ -77,7 +77,7 @@
 
   if (CGRectContainsPoint(CGRectMake(20, 40, 300, 40), touchLocation))
   {
-    [ASDirector load:@"SpriteDemo"];
+    [ASDirector load:@"FontDemo"];
   }
 
   if (CGRectContainsPoint(CGRectMake(20, 100, 300, 40), touchLocation))
@@ -87,7 +87,7 @@
 
   if (CGRectContainsPoint(CGRectMake(20, 160, 300, 40), touchLocation))
   {
-    [ASDirector load:@"FontDemo"];
+    [ASDirector load:@"LandscapeDemo"];
   }
 }
 
