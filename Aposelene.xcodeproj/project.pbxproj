@@ -86,7 +86,7 @@
 		A42FA5BE112BEAD300807DB1 /* TextureDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureDemo.m; sourceTree = "<group>"; };
 		A42FA789112C564600807DB1 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		A42FA78D112C56FE00807DB1 /* Aposelene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aposelene.h; sourceTree = "<group>"; };
-		A4634E33113368B80008F0DD /* LandscapeDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandscapeDemo.m; path = Source/Aposelene/Demonstration/LandscapeDemo.m; sourceTree = DEVELOPER_DIR; };
+		A4634E33113368B80008F0DD /* LandscapeDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeDemo.m; sourceTree = "<group>"; };
 		A481E63811310C10002646E2 /* BikiniBibleChan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BikiniBibleChan.plist; sourceTree = "<group>"; };
 		A481E63911310C10002646E2 /* BikiniBibleChan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BikiniBibleChan.png; sourceTree = "<group>"; };
 		A481E63E11310C5D002646E2 /* AnimationDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationDemo.m; sourceTree = "<group>"; };
